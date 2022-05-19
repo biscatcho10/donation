@@ -1,0 +1,9 @@
+{
+    "Dashboard": true,
+    "Accounts": true,
+    "Settings": true,
+    "Frontend": true,
+    "Roles": true,
+    "Backups": false,
+    "Countries": true
+}
