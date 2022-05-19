@@ -8,6 +8,10 @@
 @include('accounts::admins.sidebar')
 {{-- Users --}}
 @include('accounts::users.sidebar')
+{{-- Partners --}}
+@include('partners::partners.sidebar')
+{{-- Products --}}
+{{-- Products --}}
 {{-- Roles --}}
 {{--patients--}}
 {{-- @include('dashboard::sidebar.patients') --}}
