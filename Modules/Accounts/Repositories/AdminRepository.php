@@ -33,9 +33,9 @@ class AdminRepository implements CrudRepository
      */
     public function all()
     {
-        if (\Module::collections()->has('Roles')) {
-            return Admin::whereRoleNot(['super_admin', 'user'])->filter($this->filter)->paginate(request('perPage'));
-        }
+        // if (\Module::collections()->has('Roles')) {
+        //     return Admin::whereRoleNot(['super_admin', 'user'])->filter($this->filter)->paginate(request('perPage'));
+        // }
 
         return Admin::where('email', '!=', 'admin@demo.com')->where('email', '!=', 'root@demo.com')->filter($this->filter)->paginate(request('perPage'));
     }
@@ -50,10 +50,10 @@ class AdminRepository implements CrudRepository
     {
         $admin = Admin::create($data);
 
-        $this->setType($admin, $data);
-        if (\Module::collections()->has('Roles')) {
-            $admin->attachRoles([$data['role_id']]);
-        }
+        // $this->setType($admin, $data);
+        // if (\Module::collections()->has('Roles')) {
+        //     $admin->attachRoles([$data['role_id']]);
+        // }
 
         $admin->setVerified();
 
@@ -92,9 +92,9 @@ class AdminRepository implements CrudRepository
 
         $this->setType($admin, $data);
 
-        if (\Module::collections()->has('Roles')) {
-            $admin->syncRoles([$data['role_id']]);
-        }
+        // if (\Module::collections()->has('Roles')) {
+        //     $admin->syncRoles([$data['role_id']]);
+        // }
 
         $admin->addAllMediaFromTokens();
 

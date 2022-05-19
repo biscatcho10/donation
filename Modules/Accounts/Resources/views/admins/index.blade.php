@@ -25,8 +25,8 @@
             <tr>
                 <th>@lang('accounts::admins.attributes.name')</th>
                 <th>@lang('accounts::admins.attributes.email')</th>
-                <th>@lang('accounts::admins.attributes.phone')</th>
-                <th>@lang('accounts::admins.attributes.verified')</th>
+                {{-- <th>@lang('accounts::admins.attributes.phone')</th>
+                <th>@lang('accounts::admins.attributes.verified')</th> --}}
                 <th>@lang('accounts::admins.attributes.created_at')</th>
                 <th>...</th>
             </tr>
@@ -58,8 +58,8 @@
                         </a>
                     </td>
                     <td>{{ $admin->email }}</td>
-                    <td>{{ $admin->phone }}</td>
-                    <td>@include('accounts::admins.partials.flags.verified')</td>
+                    {{-- <td>{{ $admin->phone }}</td>
+                    <td>@include('accounts::admins.partials.flags.verified')</td> --}}
                     <td>{{ $admin->created_at->format('Y-m-d') }}</td>
 
                     <td>

@@ -43,9 +43,7 @@ class AdminRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'unique:users'],
-            'phone' => ['required', 'unique:users,phone'],
             'password' => ['required', 'min:8', 'confirmed'],
-            'type' => ['sometimes', 'nullable', Rule::in(array_keys(trans('accounts::users.types')))],
         ];
     }
 
@@ -59,9 +57,7 @@ class AdminRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'unique:users,email,' . $this->route('admin')->id],
-            'phone' => ['required', 'unique:users,phone,' . $this->route('admin')->id],
             'password' => ['nullable', 'min:8', 'confirmed'],
-            'type' => ['sometimes', 'nullable', Rule::in(array_keys(trans('accounts::users.types')))],
         ];
     }
 

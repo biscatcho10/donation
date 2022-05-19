@@ -1,10 +1,9 @@
 @include('dashboard::errors')
 {{ BsForm::text('name')->required()->attribute(['data-parsley-maxlength' => '191','data-parsley-minlength' => '3']) }}
 {{ BsForm::email('email')->required()->attribute(['data-parsley-type' => 'email','data-parsley-minlength' => '3']) }}
-{{ BsForm::text('phone')->required()->attribute(['data-parsley-type' => 'number','data-parsley-minlength' => '3']) }}
 {{ BsForm::password('password') }}
 {{ BsForm::password('password_confirmation') }}
-@if(\Module::collections()->has('Roles'))
+{{-- @if(\Module::collections()->has('Roles'))
     <select2 name="role_id"
             label="@lang('roles::roles.singular')"
             remote-url="{{ route('roles.select') }}"
@@ -13,7 +12,7 @@
             @endisset
             :required="true"
     ></select2>
-@endif
+@endif --}}
 @isset($admin)
     {{ BsForm::image('avatar')->collection('avatars')->files($admin->getMediaResource('avatars'))->notes(trans('accounts::admins.messages.images_note')) }}
 @else

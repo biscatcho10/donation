@@ -22,10 +22,10 @@
                     <th width="200">@lang('accounts::admins.attributes.email')</th>
                     <td>{{ $admin->email }}</td>
                 </tr>
-                <tr>
+                {{-- <tr>
                     <th width="200">@lang('accounts::admins.attributes.phone')</th>
                     <td>{{ $admin->phone }}</td>
-                </tr>
+                </tr> --}}
                 <tr>
                     <th width="200">@lang('accounts::admins.attributes.avatar')</th>
                     <td>
