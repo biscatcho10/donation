@@ -22,6 +22,15 @@
             'module' => 'Settings',
             'icon' => 'fas fa-cog',
         ],
+        // seo main
+        [
+            'name' => trans('settings::settings.tabs.seo'),
+            'url' => route('dashboard.settings.index', ['tab' => 'seo']),
+            'can' => ['permission' => 'read_settings'],
+            'isActive' => request()->routeIs('*settings*') && request('tab') == 'seo',
+            'module' => 'Settings',
+            'icon' => 'fas fa-search',
+        ],
         // settings contacts
         [
             'name' => trans('settings::settings.tabs.contacts'),

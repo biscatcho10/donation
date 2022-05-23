@@ -29,7 +29,7 @@
                 @forelse($data as $news)
                     <tr>
                         <td class="d-none d-md-table-cell">
-                            <img src="{{ $news->getImage() }}" alt="Product 1" class="img-circle img-size-32 mr-2"
+                            <img src="{{ $news->getImage() }}" alt="Product 1" class="img-size-64 mr-2"
                                 style="height: 32px;">
                         </td>
                         <td class="d-none d-md-table-cell">

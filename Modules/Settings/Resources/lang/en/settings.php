@@ -93,6 +93,7 @@ return [
     ],
     'tabs' => [
         'main' => 'Main Settings',
+        'seo' => 'SEO Settings',
         'contacts' => 'Contact Settings',
         'app' => 'App Settings',
         'social' => 'Social Settings',
