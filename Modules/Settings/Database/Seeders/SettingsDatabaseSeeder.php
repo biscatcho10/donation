@@ -26,14 +26,14 @@ class SettingsDatabaseSeeder extends Seeder
      */
    public function run()
    {
-        Settings::set('name:en', 'Green Apple System');
-        Settings::set('name:ar', 'عيادات جرين ابل');
+        Settings::set('name:en', 'Donation System');
+        Settings::set('name:ar', 'نظام التبرعات');
 
-        Settings::set('description:en', 'Green Apple System');
-        Settings::set('description:ar', 'عيادات جرين ابل');
+        Settings::set('description:en', 'Donation System');
+        Settings::set('description:ar', 'نظام التبرعات');
 
-        Settings::set('meta_description:en', 'Green Apple System');
-        Settings::set('meta_description:ar', 'عيادات جرين ابل');
+        Settings::set('meta_description:en', 'Donation System');
+        Settings::set('meta_description:ar', 'نظام التبرعات');
 
         // images
         foreach ($this->files as $file) {
