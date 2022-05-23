@@ -6,5 +6,6 @@
     "Roles": true,
     "Backups": false,
     "Countries": true,
-    "Partners": true
+    "Partners": true,
+    "News": true
 }

@@ -10,6 +10,9 @@
 @include('accounts::users.sidebar')
 {{-- Partners --}}
 @include('partners::partners.sidebar')
+{{-- News --}}
+@include('news::news.sidebar')
+{{-- Products --}}
 {{-- Products --}}
 {{-- Products --}}
 {{-- Roles --}}
