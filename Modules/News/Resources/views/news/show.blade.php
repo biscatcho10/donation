@@ -21,7 +21,7 @@
                         </tr>
                         <tr>
                             <th width="200">@lang('news::news.attributes.content')</th>
-                            <td>{{ $news->content }}</td>
+                            <td>{!! $news->content !!}</td>
                         </tr>
                         <tr>
                             <th width="200">@lang('news::news.attributes.image')</th>
