@@ -73,6 +73,14 @@ return [
         'mail_from_address' => 'Mail From Address',
         'mail_from_name' => 'Mail From Name',
         'dashboard_template' => 'قالب لوحة التحكم',
+        'facebook_pixel' => 'Facebook Pixel',
+        'google_id_header' => 'Google ID Header',
+        'google_id_footer' => 'Google ID Footer',
+        'track_code' => 'Track Code',
+        'google_analects' => 'Google Analects',
+        'btn_track_code' => 'Button Track Code',
+        'btn_google_id_footer' => 'Button Google ID Footer',
+        'transfer_line' => 'Transfer Line',
     ],
     'dialogs' => [
         'delete' => [

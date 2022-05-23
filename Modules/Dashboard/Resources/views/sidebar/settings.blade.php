@@ -22,7 +22,7 @@
             'module' => 'Settings',
             'icon' => 'fas fa-cog',
         ],
-        // seo main
+        // settings seo
         [
             'name' => trans('settings::settings.tabs.seo'),
             'url' => route('dashboard.settings.index', ['tab' => 'seo']),
@@ -30,6 +30,15 @@
             'isActive' => request()->routeIs('*settings*') && request('tab') == 'seo',
             'module' => 'Settings',
             'icon' => 'fas fa-search',
+        ],
+        // mail seo
+        [
+            'name' => trans('settings::settings.tabs.mail'),
+            'url' => route('dashboard.settings.index', ['tab' => 'mail']),
+            'can' => ['permission' => 'read_settings'],
+            'isActive' => request()->routeIs('*settings*') && request('tab') == 'mail',
+            'module' => 'Settings',
+            'icon' => 'far fa-envelope',
         ],
         // settings contacts
         [
@@ -50,30 +59,30 @@
             'icon' => 'fab fa-facebook',
         ],
         // countries
-        [
-            'name' => trans('countries::countries.plural'),
-            'url' => route('dashboard.countries.index'),
-            'can' => ['permission' => 'read_countries'],
-            'isActive' => request()->routeIs('*countries*'),
-            'module' => 'Countries',
-            'icon' => 'fas fa-globe-asia',
-            'tree' => [
-                [
-                    'name' => trans('countries::countries.actions.list'),
-                    'url' => route('dashboard.countries.index'),
-                    'can' => ['permission' => 'read_countries'],
-                    'isActive' => request()->routeIs('*countries.index'),
-                    'module' => 'Countries',
-                ],
-                [
-                    'name' => trans('countries::countries.actions.create'),
-                    'url' => route('dashboard.countries.create'),
-                    'can' => ['permission' => 'create_countries'],
-                    'isActive' => request()->routeIs('*countries.create'),
-                    'module' => 'Countries',
-                ],
-            ],
-        ],
+        // [
+        //     'name' => trans('countries::countries.plural'),
+        //     'url' => route('dashboard.countries.index'),
+        //     'can' => ['permission' => 'read_countries'],
+        //     'isActive' => request()->routeIs('*countries*'),
+        //     'module' => 'Countries',
+        //     'icon' => 'fas fa-globe-asia',
+        //     'tree' => [
+        //         [
+        //             'name' => trans('countries::countries.actions.list'),
+        //             'url' => route('dashboard.countries.index'),
+        //             'can' => ['permission' => 'read_countries'],
+        //             'isActive' => request()->routeIs('*countries.index'),
+        //             'module' => 'Countries',
+        //         ],
+        //         [
+        //             'name' => trans('countries::countries.actions.create'),
+        //             'url' => route('dashboard.countries.create'),
+        //             'can' => ['permission' => 'create_countries'],
+        //             'isActive' => request()->routeIs('*countries.create'),
+        //             'module' => 'Countries',
+        //         ],
+        //     ],
+        // ],
     ]
 )
             @slot('tree', $trees)

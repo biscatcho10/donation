@@ -12,6 +12,10 @@
 @include('partners::partners.sidebar')
 {{-- News --}}
 @include('news::news.sidebar')
+{{-- Countries --}}
+@include('countries::sidebar')
+{{-- Cities --}}
+{{-- Cities --}}
 {{-- Products --}}
 {{-- Products --}}
 {{-- Products --}}
