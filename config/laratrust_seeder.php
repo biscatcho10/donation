@@ -22,6 +22,7 @@ return [
             'cities' => 'c,r,u,d,s',
             'partners' => 'c,r,u,d,s',
             'news' => 'c,r,u,d,s',
+            'services' => 'c,r,u,d,s',
         ],
     ],
 

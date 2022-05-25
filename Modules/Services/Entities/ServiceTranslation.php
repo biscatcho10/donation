@@ -9,10 +9,10 @@ class ServiceTranslation extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
-    
-    protected static function newFactory()
-    {
-        return \Modules\Services\Database\factories\ServiceTranslationFactory::new();
-    }
+    protected $fillable = ['name', 'description'];
+
+    protected $table = 'service_translations';
+
+    public $timestamps = false;
+
 }

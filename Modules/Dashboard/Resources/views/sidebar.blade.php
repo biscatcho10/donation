@@ -6,6 +6,8 @@
 @endcomponent
 {{-- Admins --}}
 @include('accounts::admins.sidebar')
+{{-- Service --}}
+@include('services::services.sidebar')
 {{-- Users --}}
 @include('accounts::users.sidebar')
 {{-- Partners --}}

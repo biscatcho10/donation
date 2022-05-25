@@ -62,7 +62,7 @@ class News extends Model implements HasMedia
 
 
     /**
-     * The Partner image url.
+     * The news image url.
      *
      * @return bool
      */

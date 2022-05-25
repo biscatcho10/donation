@@ -11,6 +11,6 @@
 |
 */
 
-Route::prefix('services')->group(function() {
-    Route::get('/', 'ServicesController@index');
+Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(function () {
+    Route::resource('services', 'ServicesController');
 });
