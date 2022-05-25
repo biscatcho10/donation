@@ -18,4 +18,7 @@ Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(fun
 
     // shipping settings route
     Route::get('settings/shipping', 'Dashboard\SettingController@shipping')->name('settings.shipping');
+
+    // contact us route
+    Route::resource('contact-us', 'Dashboard\ContactUsController')->except('create', 'store', 'edit', 'update');
 });

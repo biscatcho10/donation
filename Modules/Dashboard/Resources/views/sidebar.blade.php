@@ -16,6 +16,8 @@
 @include('news::news.sidebar')
 {{-- Countries --}}
 @include('countries::sidebar')
+{{-- Contact Us --}}
+@include('settings::contact-us.sidebar')
 {{-- Cities --}}
 {{-- Cities --}}
 {{-- Products --}}
