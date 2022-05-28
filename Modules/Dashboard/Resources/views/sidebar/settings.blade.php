@@ -47,7 +47,7 @@
             'can' => ['permission' => 'read_settings'],
             'isActive' => request()->routeIs('*settings*') && request('tab') == 'contacts',
             'module' => 'Settings',
-            'icon' => 'mdi mdi-contacts',
+            'icon' => 'fas fa-address-card',
         ],
         // settings social
         [
