@@ -9,7 +9,7 @@
 {{-- Service --}}
 @include('services::services.sidebar')
 {{-- Users --}}
-@include('accounts::users.sidebar')
+{{-- @include('accounts::users.sidebar') --}}
 {{-- Partners --}}
 @include('partners::partners.sidebar')
 {{-- News --}}

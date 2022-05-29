@@ -12,7 +12,7 @@ class GalleryFilter extends BaseFilters
      * @var array
      */
     protected $filters = [
-        'service_id',
+        'service',
     ];
 
     /**
@@ -21,7 +21,7 @@ class GalleryFilter extends BaseFilters
      * @param string|int $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function service_id($value)
+    protected function service($value)
     {
         if ($value) {
             return $this->builder->where('service_id', $value);

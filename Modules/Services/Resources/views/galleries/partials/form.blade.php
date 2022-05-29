@@ -8,7 +8,7 @@
     </div>
 @endif
 
-{{ BsForm::select('service_id')->required()->options($services)->attribute('class', 'form-control')->label(__("services::services.plural")) }}
+{{ BsForm::select('service_id')->required()->options($services)->attribute('class', 'form-control')->label(__("services::services.plural"))->placeholder(__('Select one')) }}
 
 @isset($gallery)
     {{ BsForm::image('image')->collection('images')->files($gallery->getMediaResource('images'))->notes(trans('services::galleries.messages.images_note')) }}
