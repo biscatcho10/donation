@@ -111,5 +111,6 @@ return [
         'terms' => 'Terms & Conditions',
         'privacy' => 'Privacy Policy',
         'themes' => 'Theme Settings',
+        "Titles and Labels" => "Titles and Labels",
     ],
 ];

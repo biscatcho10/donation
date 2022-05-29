@@ -58,6 +58,15 @@
             'module' => 'Settings',
             'icon' => 'fab fa-facebook',
         ],
+        // settings titles
+        [
+            'name' => trans('settings::settings.tabs.Titles and Labels'),
+            'url' => route('dashboard.settings.index', ['tab' => 'titles']),
+            'can' => ['permission' => 'read_settings'],
+            'isActive' => request()->routeIs('*settings*') && request('tab') == 'titles',
+            'module' => 'Settings',
+            'icon' => 'fas fa-pen-fancy',
+        ],
         // countries
         // [
         //     'name' => trans('countries::countries.plural'),
