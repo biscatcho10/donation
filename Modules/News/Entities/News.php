@@ -14,7 +14,7 @@ class News extends Model implements HasMedia
 {
     use HasFactory, Translatable, Filterable, HasUploader, InteractsWithMedia;
 
-    protected $fillable = ['created_at', 'updated_at'];
+    protected $fillable = ['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords'];
 
     protected $table = 'news';
 

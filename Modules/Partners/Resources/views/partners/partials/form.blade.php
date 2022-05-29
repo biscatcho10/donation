@@ -16,3 +16,4 @@
     {{ BsForm::image('image')->collection('images')->notes(trans('partners::partners.messages.images_note')) }}
 @endisset
 
+@include('services::seo.inputs')
