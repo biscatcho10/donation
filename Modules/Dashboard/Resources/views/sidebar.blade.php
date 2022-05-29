@@ -14,6 +14,8 @@
 @include('partners::partners.sidebar')
 {{-- News --}}
 @include('news::news.sidebar')
+{{-- Galleries --}}
+@include('services::galleries.sidebar')
 {{-- Countries --}}
 @include('countries::sidebar')
 {{-- Contact Us --}}
