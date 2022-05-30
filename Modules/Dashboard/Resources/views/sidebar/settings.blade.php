@@ -60,7 +60,7 @@
         ],
         // settings titles
         [
-            'name' => trans('settings::settings.tabs.Titles and Labels'),
+            'name' => trans('settings::settings.tabs.titles'),
             'url' => route('dashboard.settings.index', ['tab' => 'titles']),
             'can' => ['permission' => 'read_settings'],
             'isActive' => request()->routeIs('*settings*') && request('tab') == 'titles',

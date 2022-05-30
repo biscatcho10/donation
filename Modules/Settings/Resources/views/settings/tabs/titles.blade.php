@@ -1,7 +1,7 @@
 @extends('dashboard::layouts.default')
 
 @section('title')
-    @lang('settings::settings.tabs.social')
+    @lang('settings::settings.tabs.titles')
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
         {{ BsForm::resource('settings::settings')->put(route('dashboard.settings.update'), ['files' => true]) }}
         @component('dashboard::layouts.components.box')
 
-            @slot('title', trans('settings::settings.tabs.social'))
+            @slot('title', trans('settings::settings.tabs.titles'))
 
             @include('settings::settings.partials.titles-form')
 
