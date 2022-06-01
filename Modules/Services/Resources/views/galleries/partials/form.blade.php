@@ -8,12 +8,21 @@
     </div>
 @endif
 
-{{ BsForm::select('service_id')->required()->options($services)->attribute('class', 'form-control')->label(__("services::services.plural"))->placeholder(__('Select one')) }}
+@bsMultilangualFormTabs
+    {{ BsForm::text('name')->required()->attribute(['data-parsley-maxlength' => '191', 'data-parsley-minlength' => '3']) }}
+    {{ BsForm::textarea('description')->rows('3') }}
+@endBsMultilangualFormTabs
 
 @isset($gallery)
-    {{ BsForm::image('image')->collection('images')->files($gallery->getMediaResource('images'))->notes(trans('services::galleries.messages.images_note')) }}
+    <div class="form-group col-6">
+        <label for="category-image">{{ __('Album') }}</label>
+        {{ BsForm::image('albums')->unlimited(false)->collection('albums')->files($item->getMediaResource('albums'))->notes(trans('services::galleries.messages.images_note')) }}
+    </div>
 @else
-    {{ BsForm::image('image')->collection('images')->notes(trans('services::galleries.messages.images_note')) }}
+    <div class="form-group col-6">
+        <label for="category-image">{{ __('Album') }}</label>
+        {{ BsForm::image('albums')->unlimited(false)->collection('albums')->notes('Supported types: jpeg, png,jpg,gif,svg | max: 10 Mb') }}
+    </div>
 @endisset
 
-@include("services::seo.inputs")
+@include('services::seo.inputs')

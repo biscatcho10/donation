@@ -50,9 +50,7 @@ class GalleriesController extends Controller
     public function index()
     {
         $galleries = $this->repository->all();
-        $services = Service::listsTranslations('name')->pluck('name', 'id')->toArray();
-
-        return view('services::galleries.index', compact('galleries', 'services'));
+        return view('services::galleries.index', compact('galleries'));
     }
 
     /**
@@ -62,8 +60,7 @@ class GalleriesController extends Controller
      */
     public function create()
     {
-        $services = Service::listsTranslations('name')->pluck('name', 'id')->toArray();
-        return view('services::galleries.create', compact('services'));
+        return view('services::galleries.create');
     }
 
     /**

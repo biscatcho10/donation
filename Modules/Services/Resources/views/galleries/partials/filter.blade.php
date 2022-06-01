@@ -4,7 +4,10 @@
 
     <div class="row">
         <div class="col-md-3">
-            {{ BsForm::select('service')->options($services)->attribute('class', 'form-control')->label(__("services::services.plural"))->placeholder(__("Select one")) }}
+            {{ BsForm::text('name')->value(request('name')) }}
+        </div>
+        <div class="col-md-3">
+            {{ BsForm::text('description')->value(request('description')) }}
         </div>
         <div class="col-md-3">
             {{ BsForm::number('perPage')

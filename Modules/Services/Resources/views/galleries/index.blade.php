@@ -20,7 +20,8 @@
             <thead>
                 <tr>
                     <th>@lang('services::galleries.attributes.image')</th>
-                    <th>@lang('services::galleries.attributes.service')</th>
+                    <th>@lang('services::galleries.attributes.name')</th>
+                    <th>@lang('services::galleries.attributes.description')</th>
                     <th style="width: 160px">...</th>
                 </tr>
             </thead>
@@ -31,9 +32,8 @@
                             <img src="{{ $gallery->getImage() }}" class="img-circle img-size-64 mr-2">
                         </td>
                         <td>
-                            <a href="{{ route('dashboard.services.show', $gallery->service) }}">
-                                {{ $gallery->service->name }}
-                            </a>
+                            {{ $gallery->name }}
+                            {{ $gallery->description }}
                         </td>
                         <td style="width: 160px">
                             @include('services::galleries.partials.actions.show')

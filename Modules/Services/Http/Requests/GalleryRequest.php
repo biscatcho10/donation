@@ -39,6 +39,7 @@ class GalleryRequest extends FormRequest
     public function createRules()
     {
         return RuleFactory::make([
+            '%name%' => ['required', 'string', 'max:255'],
             'media' => 'required', 'mimes:jpeg,jpg,png', 'max:1000',
         ]);
     }
@@ -51,6 +52,7 @@ class GalleryRequest extends FormRequest
     public function updateRules()
     {
         return RuleFactory::make([
+            '%name%' => ['required', 'string', 'max:255'],
             'media' => 'nullable', 'mimes:jpeg,jpg,png', 'max:1000',
         ]);
     }

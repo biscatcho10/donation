@@ -12,7 +12,7 @@ Breadcrumbs::for('dashboard.galleries.create', function ($breadcrumb) {
 
 Breadcrumbs::for('dashboard.galleries.show', function ($breadcrumb, $gallery) {
     $breadcrumb->parent('dashboard.galleries.index');
-    $breadcrumb->push($gallery->service->name, route('dashboard.galleries.show', $gallery));
+    $breadcrumb->push($gallery->name, route('dashboard.galleries.show', $gallery));
 });
 
 Breadcrumbs::for('dashboard.galleries.edit', function ($breadcrumb, $gallery) {

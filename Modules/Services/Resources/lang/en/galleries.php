@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'singular' => 'Gallery',
-    'plural' => 'Images',
-    'empty' => 'There are no Images yet.',
-    'count' => 'Images count',
+    'singular' => 'Album',
+    'plural' => 'Albums',
+    'empty' => 'There are no Albums yet.',
+    'count' => 'Albums count',
     'search' => 'Search',
     'select' => 'Select Image',
-    'perPage' => 'Images Per Page',
+    'perPage' => 'Albums Per Page',
     'filter' => 'Search for Image',
     'actions' => [
         'list' => 'List all',
@@ -26,9 +26,9 @@ return [
         'images_note' => 'Supported types: jpeg, png,jpg | Max File Size:10MB',
     ],
     'attributes' => [
+        'name' => 'Album Name',
+        'description' => 'Album Description',
         'image' => 'Image',
-        'service_id' => 'Service',
-        'service' => 'Service',
 
     ],
     'dialogs' => [

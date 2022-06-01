@@ -12,7 +12,8 @@ class GalleryFilter extends BaseFilters
      * @var array
      */
     protected $filters = [
-        'service',
+        'name',
+        'description',
     ];
 
     /**
@@ -21,10 +22,25 @@ class GalleryFilter extends BaseFilters
      * @param string|int $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function service($value)
+    protected function name($value)
     {
         if ($value) {
-            return $this->builder->where('service_id', $value);
+            return $this->builder->whereTranslationLike('name', "%$value%");
+        }
+
+        return $this->builder;
+    }
+
+    /**
+     * Filter the query by a given description.
+     *
+     * @param string|int $value
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function description($value)
+    {
+        if ($value) {
+            return $this->builder->whereTranslationLike('description', "%$value%");
         }
 
         return $this->builder;
