@@ -17,4 +17,4 @@
     {{ BsForm::image('image')->collection('images')->notes(trans('news::news.messages.images_note')) }}
 @endisset
 
-@include('services::seo.inputs')
+@include('dashboard::seo.inputs')

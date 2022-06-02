@@ -1,12 +1,12 @@
 @extends('dashboard::layouts.default')
 
 @section('title')
-    {{ $gallery->service->name }}
+    {{ $gallery->name }}
 @endsection
 
 @section('content')
     @component('dashboard::layouts.components.page')
-        @slot('title', $gallery->service->name)
+        @slot('title', $gallery->name)
         @slot('breadcrumbs', ['dashboard.galleries.edit', $gallery])
 
         {{ BsForm::resource('services::galleries')->putModel($gallery, route('dashboard.galleries.update', $gallery), ['files' => true,'data-parsley-validate']) }}

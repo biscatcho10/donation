@@ -13,15 +13,15 @@
     {{ BsForm::textarea('description')->rows('3') }}
 @endBsMultilangualFormTabs
 
-@isset($gallery)
+@isset($event)
     <div class="form-group col-6">
-        <label for="category-image">{{ __('Album') }}</label>
-        {{ BsForm::image('albums')->unlimited(false)->collection('albums')->files($gallery->getMediaResource('albums'))->notes(trans('services::galleries.messages.images_note')) }}
+        <label for="category-image"> @lang('services::events.plural') </label>
+        {{ BsForm::image('events')->unlimited(false)->collection('events')->files($event->getMediaResource('events'))->notes(trans('services::galleries.messages.images_note')) }}
     </div>
 @else
     <div class="form-group col-6">
-        <label for="category-image">{{ __('Album') }}</label>
-        {{ BsForm::image('albums')->unlimited(false)->collection('albums')->notes('Supported types: jpeg, png,jpg,gif,svg | max: 10 Mb') }}
+        <label for="category-image"> @lang('services::events.plural') </label>
+        {{ BsForm::image('events')->unlimited(false)->collection('events')->notes('Supported types: jpeg, png,jpg,gif,svg | max: 10 Mb') }}
     </div>
 @endisset
 

@@ -90,8 +90,8 @@ class GalleriesController extends Controller
     public function show(Gallery $gallery)
     {
         $gallery = $this->repository->find($gallery);
-
-        return view('services::galleries.show', compact('gallery'));
+        $events = $gallery->events()->paginate();
+        return view('services::galleries.show', compact('gallery', 'events'));
     }
 
     /**
@@ -102,8 +102,7 @@ class GalleriesController extends Controller
      */
     public function edit(Gallery $gallery)
     {
-        $services = Service::listsTranslations('name')->pluck('name', 'id')->toArray();
-        return view('services::galleries.edit', compact('gallery', 'services'));
+        return view('services::galleries.edit', compact('gallery'));
     }
 
     /**

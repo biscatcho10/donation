@@ -14,4 +14,5 @@
 Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(function () {
     Route::resource('services', 'ServicesController');
     Route::resource('galleries', 'GalleriesController');
+    Route::resource('{gallery}/events', 'EventsController');
 });
