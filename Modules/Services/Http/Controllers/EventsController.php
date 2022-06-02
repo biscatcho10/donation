@@ -132,8 +132,8 @@ class EventsController extends Controller
     {
         $this->repository->delete($event);
 
-        flash(trans('services::services.messages.deleted'))->error();
+        flash(trans('services::events.messages.deleted'))->error();
 
-        return redirect()->route('dashboard.services.index');
+        return redirect()->route('dashboard.events.index', $gallery);
     }
 }
