@@ -81,6 +81,12 @@ return [
         'btn_track_code' => 'Button Track Code',
         'btn_google_id_footer' => 'Button Google ID Footer',
         'transfer_line' => 'Transfer Line',
+        'association_foundation' => 'نشأة الجمعية',
+        'our_vision' => 'رؤيتنا',
+        'our_message' => 'رسالتنا',
+        'our_goals' => 'أهدافنا',
+        'awards' => 'الجوائز',
+        'video' => 'الفيديو',
     ],
     'dialogs' => [
         'delete' => [
@@ -105,7 +111,7 @@ return [
         'social' => 'اعدادات السوشيال ميديا',
         'mail' => 'اعدادات رسائل البريد',
         'pusher' => 'اعدادات ال Pusher',
-        'about' => 'صفحة من نحن',
+        'about' => 'من نحن',
         'terms' => 'صفحة الشروط والاحكام',
         'privacy' => 'صفحة سياسة الموقع',
         'themes' => 'اعدادات الثيم',

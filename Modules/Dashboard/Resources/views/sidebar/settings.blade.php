@@ -22,6 +22,15 @@
             'module' => 'Settings',
             'icon' => 'fas fa-cog',
         ],
+        // settings about
+        [
+            'name' => trans('settings::settings.tabs.about'),
+            'url' => route('dashboard.settings.index', ['tab' => 'about']),
+            'can' => ['permission' => 'read_settings'],
+            'isActive' => request()->routeIs('*settings*') && request('tab') == 'about',
+            'module' => 'Settings',
+            'icon' => 'fas fa-file-invoice',
+        ],
         // settings seo
         [
             'name' => trans('settings::settings.tabs.seo'),

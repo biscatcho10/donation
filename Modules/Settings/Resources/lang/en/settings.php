@@ -79,6 +79,12 @@ return [
         'btn_track_code' => 'Button Track Code',
         'btn_google_id_footer' => 'Button Google ID Footer',
         'transfer_line' => 'Transfer Line',
+        'association_foundation' => 'Association\'s Foundation',
+        'our_vision' => 'Our Vision',
+        'our_message' => 'Our Message',
+        'our_goals' => 'Our Goals',
+        'awards' => 'Awards',
+        'video' => 'Video',
     ],
     'dialogs' => [
         'delete' => [
