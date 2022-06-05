@@ -33,6 +33,7 @@ return [
         'tag_manager_note' => 'من فضلك ادخل tag manager id .',
         'shipping_note' => 'من فضلك اختر شركة شحن',
         'images_note' => 'الملفات المدعومة: jpeg ، png ، jpg | الحد الأقصى لحجم الملف: 10 ميجا بايت',
+        'update_about' => 'تم تعديل بيانات عن الموقع بنجاح.',
     ],
     'attributes' => [
         'facebook' => 'Facebook',
@@ -87,6 +88,8 @@ return [
         'our_goals' => 'أهدافنا',
         'awards' => 'الجوائز',
         'video' => 'الفيديو',
+        'video_type' => 'نوع الفيديو',
+        'video_link' => 'رابط الفيديو',
     ],
     'dialogs' => [
         'delete' => [

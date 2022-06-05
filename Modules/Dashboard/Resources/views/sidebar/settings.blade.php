@@ -25,9 +25,9 @@
         // settings about
         [
             'name' => trans('settings::settings.tabs.about'),
-            'url' => route('dashboard.settings.index', ['tab' => 'about']),
+            'url' => route('dashboard.about-us'),
             'can' => ['permission' => 'read_settings'],
-            'isActive' => request()->routeIs('*settings*') && request('tab') == 'about',
+            'isActive' => request()->routeIs('dashboard.about-us'),
             'module' => 'Settings',
             'icon' => 'fas fa-file-invoice',
         ],

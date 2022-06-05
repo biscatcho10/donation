@@ -14,7 +14,7 @@ class AboutUs extends Model implements HasMedia
 {
     use HasFactory, Translatable, Filterable, HasUploader, InteractsWithMedia;
 
-    protected $fillable = ['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords'];
+    protected $fillable = ['video_type', 'video_link', 'created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords'];
 
     protected $table = 'about_us';
 
@@ -29,4 +29,5 @@ class AboutUs extends Model implements HasMedia
         'translations',
         'media',
     ];
+
 }

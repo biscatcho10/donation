@@ -21,4 +21,8 @@ Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(fun
 
     // contact us route
     Route::resource('contact-us', 'Dashboard\ContactUsController')->except('create', 'store', 'edit', 'update');
+
+    // about us route
+    Route::get('about-us', 'Dashboard\AboutUsController@form')->name('about-us');
+    Route::put('about-us', 'Dashboard\AboutUsController@update')->name('about-us.update');
 });

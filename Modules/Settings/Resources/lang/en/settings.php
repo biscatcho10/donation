@@ -32,6 +32,7 @@ return [
         'deleted' => 'The setting has been deleted successfully.',
         'tag_manager_note' => 'Please enter your tag manager id.',
         'images_note' => 'Supported types: jpeg, png,jpg | Max File Size:10MB',
+        'update_about' => 'About us data has been updated successfully.',
     ],
     'attributes' => [
         'facebook' => 'Facebook',
@@ -85,6 +86,8 @@ return [
         'our_goals' => 'Our Goals',
         'awards' => 'Awards',
         'video' => 'Video',
+        'video_type' => 'Video Type',
+        'video_link' => 'Video Link',
     ],
     'dialogs' => [
         'delete' => [
