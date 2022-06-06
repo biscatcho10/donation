@@ -2,7 +2,7 @@
     @slot('can', ['permission' => 'read_galleries'])
     @slot('url', route('dashboard.galleries.index'))
     @slot('name', trans('services::galleries.plural'))
-    @slot('isActive', request()->routeIs('*services*'))
+    @slot('isActive', request()->routeIs('*galleries*'))
     @slot('icon', 'fas fa-images')
     @slot('tree', [
         [

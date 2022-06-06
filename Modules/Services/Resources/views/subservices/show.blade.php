@@ -1,12 +1,12 @@
 @extends('dashboard::layouts.default')
 
 @section('title')
-    {{ $service->name }}
+    {{ $sub_service->name }}
 @endsection
 @section('content')
     @component('dashboard::layouts.components.page')
-        @slot('title', $service->name)
-        @slot('breadcrumbs', ['dashboard.services.show', $service])
+        @slot('title', $sub_service->name)
+        @slot('breadcrumbs', ['dashboard.subservices.show', [$service, $sub_service]])
 
         <div class="row">
             <div class="col-md-12">
@@ -16,17 +16,21 @@
                     <table class="table table-middle">
                         <tbody>
                         <tr>
-                            <th width="200">@lang('services::services.attributes.name')</th>
-                            <td>{{ $service->name }}</td>
-                        </tr>
-                        <tr>
-                            <th>@lang('services::services.attributes.description')</th>
-                            <td>{{ $service->description }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('services::services.attributes.image')</th>
+                            <th width="400">@lang('services::subservices.attributes.name')</th>
                             <td>
-                                @foreach ($service->images as $album)
+                                {{ $sub_service->name }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="400">@lang('services::subservices.attributes.description')</th>
+                            <td>
+                                {{ $sub_service->description }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="400">@lang('services::subservices.attributes.image')</th>
+                            <td>
+                                @foreach ($sub_service->images as $album)
                                     <img src="{{ $album['url'] }}" class="mr-2 img-thumbnail" style="width: 140px; height: 110px;">
                                 @endforeach
                             </td>
@@ -35,14 +39,12 @@
                     </table>
 
                     @slot('footer')
-                        @include('services::services.partials.actions.edit')
-                        @include('services::services.partials.actions.delete')
+                        @include('services::subservices.partials.actions.edit')
+                        @include('services::subservices.partials.actions.delete')
                     @endslot
                 @endcomponent
             </div>
         </div>
 
     @endcomponent
-
-    @include('services::subservices.index')
 @endsection

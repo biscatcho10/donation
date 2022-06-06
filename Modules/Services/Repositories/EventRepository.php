@@ -56,7 +56,6 @@ class EventRepository implements ChildCrudRepository
      */
     public function find($model)
     {
-        // dd($model);
         if ($model instanceof Event) {
             return $model;
         }

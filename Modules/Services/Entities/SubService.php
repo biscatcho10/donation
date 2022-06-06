@@ -7,16 +7,16 @@ use App\Http\Filters\Filterable;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Modules\Support\Traits\Selectable;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Service extends Model implements HasMedia
+class SubService extends Model implements HasMedia
 {
-    use HasFactory, Translatable, Filterable, Selectable, HasUploader, InteractsWithMedia;
+    use HasFactory, Translatable, Filterable, HasUploader, InteractsWithMedia;
 
-    protected $fillable = ['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords'];
-    protected $table = 'services';
+    protected $fillable = ['service_id', 'created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords'];
+
+    protected $table = 'sub_services';
 
     public $translatedAttributes = ['name', 'description'];
 
@@ -76,9 +76,9 @@ class Service extends Model implements HasMedia
 
     // Relationships
 
-    public function sub_services()
+    public function service()
     {
-        return $this->hasMany(SubService::class, 'service_id');
+        return $this->belongsTo(Service::class);
     }
 
 }

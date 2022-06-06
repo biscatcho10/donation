@@ -23,6 +23,7 @@ return [
             'partners' => 'c,r,u,d,s',
             'news' => 'c,r,u,d,s',
             'services' => 'c,r,u,d,s',
+            'subservices' => 'c,r,u,d,s',
             'galleries' => 'c,r,u,d,s',
             'events' => 'c,r,u,d,s',
             'contactus' => 'r,d,s',

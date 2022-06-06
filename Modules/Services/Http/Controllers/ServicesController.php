@@ -92,8 +92,9 @@ class ServicesController extends Controller
     public function show(Service $service)
     {
         $service = $this->repository->find($service);
+        $subservices = $service->sub_services()->paginate(10);
 
-        return view('services::services.show', compact('service'));
+        return view('services::services.show', compact('service', 'subservices'));
     }
 
     /**

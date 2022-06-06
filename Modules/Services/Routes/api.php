@@ -13,6 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/services', function (Request $request) {
-    return $request->user();
-});
+Route::get('/select/services', 'SelectController@services')->name('services.select');
