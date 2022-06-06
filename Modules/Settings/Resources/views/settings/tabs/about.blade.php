@@ -9,7 +9,7 @@
         @slot('title', trans('settings::settings.actions.update'))
         @slot('breadcrumbs', ['dashboard.settings.update'])
 
-        {{ BsForm::putModel($about, route('dashboard.about-us.update'), ['files' => true]) }}
+        {{ BsForm::putModel($about, route('dashboard.about-us.update'), ['files' => true, 'class' => 'repeater-award']) }}
         @component('dashboard::layouts.components.box')
             @slot('title', trans('settings::settings.tabs.about'))
 
@@ -43,5 +43,21 @@
             let $selected = $('.video_type').val();
             $('.' + $selected + '-wrapper').show().siblings("div.hide_div").hide();
         }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            "use strict";
+            $(".repeater-award").repeater({
+                initEmpty: false,
+                show: function() {
+                    $(this).slideDown();
+                },
+                hide: function(e) {
+                    $(this).slideUp(1000,e);
+                },
+                isFirstItemUndeletable: true
+            })
+        });
     </script>
 @endpush

@@ -30,4 +30,9 @@ class AboutUs extends Model implements HasMedia
         'media',
     ];
 
+
+    protected $casts = [
+        'awards' => 'array',
+    ];
+
 }
