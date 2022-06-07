@@ -8,5 +8,6 @@
     "Countries": true,
     "Partners": true,
     "News": true,
-    "Services": true
+    "Services": true,
+    "Volunteers": true
 }
