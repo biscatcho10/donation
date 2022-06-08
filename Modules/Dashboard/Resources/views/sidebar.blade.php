@@ -8,6 +8,9 @@
 @include('accounts::admins.sidebar')
 {{-- Service --}}
 @include('services::services.sidebar')
+{{-- volunteers --}}
+@include('volunteers::volunteers.sidebar')
+{{-- Events --}}
 {{-- Users --}}
 {{-- @include('accounts::users.sidebar') --}}
 {{-- Partners --}}

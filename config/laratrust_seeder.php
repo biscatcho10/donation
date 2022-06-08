@@ -26,6 +26,7 @@ return [
             'subservices' => 'c,r,u,d,s',
             'galleries' => 'c,r,u,d,s',
             'events' => 'c,r,u,d,s',
+            'volunteers' => 'c,r,u,d,s',
             'contactus' => 'r,d,s',
         ],
     ],
