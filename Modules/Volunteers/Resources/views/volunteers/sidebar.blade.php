@@ -10,14 +10,14 @@
             'url' => route('dashboard.volunteers.index'),
             'can' => ['permission' => 'read_volunteers'],
             'isActive' => request()->routeIs('*volunteers.index'),
-            'module' => 'volunteers',
+            'module' => 'Volunteers',
         ],
         [
             'name' => trans('volunteers::volunteers.actions.create'),
             'url' => route('dashboard.volunteers.create'),
             'can' => ['permission' => 'create_volunteers'],
             'isActive' => request()->routeIs('*volunteers.create'),
-            'module' => 'volunteers',
+            'module' => 'Volunteers',
         ],
     ])
 @endcomponent

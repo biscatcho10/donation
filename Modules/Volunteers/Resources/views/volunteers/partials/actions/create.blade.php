@@ -1,8 +1,8 @@
-@if(auth()->user()->hasPermission('create_partners'))
-    <a href="{{ route('dashboard.partners.create') }}"
+@if(auth()->user()->hasPermission('create_volunteers'))
+    <a href="{{ route('dashboard.volunteers.create') }}"
        class="btn btn-primary font-weight-bolder">
         <i class="fas fa fa-fw fa-plus"></i>
-        @lang('partners::partners.actions.create')
+        @lang('volunteers::volunteers.actions.create')
     </a>
 @else
     <button
@@ -10,6 +10,6 @@
         disabled
         class="btn btn-primary font-weight-bolder">
         <i class="fas fa fa-fw fa-plus"></i>
-        @lang('partners::partners.actions.create')
+        @lang('volunteers::volunteers.actions.create')
     </button>
 @endif

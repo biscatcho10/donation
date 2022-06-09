@@ -42,8 +42,9 @@ class VolunteerRequest extends FormRequest
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:volunteers',
             'phone' => 'required|string|max:255',
-            'address' => 'required|string|max:255',
+            // 'address' => 'required|string|max:255',
             'dob' => 'required|date',
+            'how_know_id' => 'required|exists:reasons,id',
         ]);
     }
 
@@ -56,10 +57,11 @@ class VolunteerRequest extends FormRequest
     {
         return RuleFactory::make([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:volunteers',
+            'email' => 'required|string|email|max:255|unique:volunteers,email,' . $this->volunteer->id,
             'phone' => 'required|string|max:255',
-            'address' => 'required|string|max:255',
+            // 'address' => 'required|string|max:255',
             'dob' => 'required|date',
+            'how_know_id' => 'required|exists:reasons,id',
         ]);
     }
 

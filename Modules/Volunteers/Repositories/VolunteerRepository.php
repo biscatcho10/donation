@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Volunteer\Repositories;
+namespace Modules\Volunteers\Repositories;
 
 use Modules\Contracts\CrudRepository;
 use Modules\Volunteers\Entities\Volunteer;
@@ -44,6 +44,10 @@ class VolunteerRepository implements CrudRepository
         /** @var Volunteer $volunteer */
         $volunteer = Volunteer::create($data);
 
+        // add volunteer's address
+        $volunteer->address()->create(['address_details' => $data['address_details'], 'country_id' => $data['country_id'], 'city_id' => $data['city_id']]);
+
+
         return $volunteer;
     }
 
@@ -73,7 +77,12 @@ class VolunteerRepository implements CrudRepository
     {
         $volunteer = $this->find($model);
 
-        $volunteer->update($data);
+        // update volunteer's address
+        $volunteer->address()->update(['address_details' => $data['address_details'], 'country_id' => $data['country_id'], 'city_id' => $data['city_id']]);
+
+        if (!empty($volunteer)) {
+            $volunteer->update($data);
+        }
 
         return $volunteer;
     }

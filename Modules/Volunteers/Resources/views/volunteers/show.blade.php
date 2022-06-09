@@ -29,7 +29,9 @@
                             </tr>
                             <tr>
                                 <th>@lang('volunteers::volunteers.attributes.address')</th>
-                                <td>{{ $volunteer->address }}</td>
+                                <td> <img src="{{ $volunteer->flag }}" class="img-thumbnail rounded" width="45">
+                                    {{ $volunteer->addressLocation }}
+                                </td>
                             </tr>
                             <tr>
                                 <th>@lang('volunteers::volunteers.attributes.dob')</th>

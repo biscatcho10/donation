@@ -67,6 +67,15 @@
             'module' => 'Settings',
             'icon' => 'fab fa-facebook',
         ],
+        // settings how-to-know
+        [
+            'name' => trans('howknow::reasons.reason'),
+            'url' => route('dashboard.reasons.index'),
+            'can' => ['permission' => 'read_reasons'],
+            'isActive' => request()->routeIs('*reasons.index'),
+            'module' => 'HowKnow',
+            'icon' => 'fas fa-question',
+        ],
         // settings titles
         [
             'name' => trans('settings::settings.tabs.titles'),

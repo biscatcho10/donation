@@ -32,8 +32,15 @@ return [
         'address' => 'Address',
         'dob' => 'Date of Birth',
         'nationality' => 'Nationality',
-        'educational_qualification' => 'Educational Qualification'
-
+        'educational_qualification' => 'Educational Qualification',
+        'how_know_id' => 'How do you know us ?',
+        'skills' => 'Skills',
+        'experiences' => 'Experiences',
+        'motives' => 'Motives',
+        'field_id' => 'Field',
+        'volunteer_category' => 'Volunteer Category',
+        'favorite_time' => 'Favorite Time',
+        'has_car' => 'Has Car ?',
     ],
     'dialogs' => [
         'delete' => [

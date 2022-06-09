@@ -1,0 +1,13 @@
+{
+    "name": "HowKnow",
+    "alias": "howknow",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\HowKnow\\Providers\\HowKnowServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

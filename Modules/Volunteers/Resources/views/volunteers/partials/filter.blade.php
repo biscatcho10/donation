@@ -7,6 +7,12 @@
             {{ BsForm::text('name')->value(request('name')) }}
         </div>
         <div class="col-md-3">
+            {{ BsForm::text('phone')->value(request('phone'))->label(__("volunteers::volunteers.attributes.phone")) }}
+        </div>
+        <div class="col-md-3">
+            {{ BsForm::text('email')->value(request('email'))->label(__("volunteers::volunteers.attributes.email")) }}
+        </div>
+        <div class="col-md-3">
             {{ BsForm::number('perPage')
                 ->value(request('perPage', 15))
                 ->min(1)

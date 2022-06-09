@@ -2,12 +2,10 @@
 
 namespace Modules\Volunteers\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Modules\Volunteer\Repositories\VolunteerRepository;
+use Modules\Volunteers\Repositories\VolunteerRepository;
 use Modules\Volunteers\Entities\Volunteer;
 use Modules\Volunteers\Http\Requests\VolunteerRequest;
 

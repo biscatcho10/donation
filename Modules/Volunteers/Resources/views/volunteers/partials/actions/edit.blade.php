@@ -1,5 +1,5 @@
-@if(auth()->user()->hasPermission('update_partners'))
-    <a href="{{ route('dashboard.partners.edit', $partner) }}"
+@if(auth()->user()->hasPermission('update_volunteers'))
+    <a href="{{ route('dashboard.volunteers.edit', $volunteer) }}"
        class="btn btn-outline-primary waves-effect waves-light btn-sm">
         <i class="fas fa-edit fa fa-fw"></i>
     </a>
