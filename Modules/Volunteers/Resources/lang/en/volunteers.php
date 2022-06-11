@@ -31,6 +31,7 @@ return [
         'phone' => 'Phone',
         'address' => 'Address',
         'dob' => 'Date of Birth',
+        'job' => 'Job',
         'nationality' => 'Nationality',
         'educational_qualification' => 'Educational Qualification',
         'how_know_id' => 'How do you know us ?',

@@ -13,6 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/volunteers', function (Request $request) {
-    return $request->user();
-});
+Route::get('/select/fields', 'SelectController@fields')->name('fields.select');

@@ -38,6 +38,12 @@
                                 <td>{{ Carbon\Carbon::parse($volunteer->dob)->format('d/m/Y') }}</td>
                             </tr>
                             <tr>
+                                <th>@lang('volunteers::volunteers.attributes.job')</th>
+                                <td>
+                                    {{ $volunteer->job }}
+                                </td>
+                            </tr>
+                            <tr>
                                 <th>@lang('volunteers::volunteers.attributes.nationality')</th>
                                 <td>{{ $volunteer->nationality }}</td>
                             </tr>

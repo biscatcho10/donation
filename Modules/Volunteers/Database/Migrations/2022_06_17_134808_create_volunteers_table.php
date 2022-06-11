@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Modules\Volunteers\Entities\Field;
 
 class CreateVolunteersTable extends Migration
 {
@@ -27,7 +28,7 @@ class CreateVolunteersTable extends Migration
             $table->text('skills')->nullable();
             $table->text('experiences')->nullable();
             $table->text('motives')->nullable();
-            // $table->unsignedBigInteger('field_id')->nullable();
+            $table->foreignIdFor(Field::class)->constrained()->onDelete('cascade')->nullable();
             // $table->text('volunteer_category')->nullable();
             $table->text('favorite_time')->nullable();
             $table->boolean('has_car')->default(false);

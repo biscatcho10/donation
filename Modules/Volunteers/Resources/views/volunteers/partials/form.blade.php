@@ -48,6 +48,13 @@
             value="{{ $volunteer->how_know_id ?? old('how_know_id') }}" @endisset :required="true">
         </select2>
     </div>
+
+    <div class="col-12">
+        <select2 name="field_id" label="{{ __('volunteers::volunteers.attributes.field_id') }}"
+            remote-url="{{ route('fields.select') }}" @isset($volunteer)
+            value="{{ $volunteer->field_id ?? old('field_id') }}" @endisset :required="true">
+        </select2>
+    </div>
 </div>
 
 <hr>

@@ -31,6 +31,7 @@ return [
         'phone' => 'رقم الهاتف',
         'address' => 'العنوان',
         'dob' => 'تاريخ الميلاد',
+        'job' => 'الوظيفة',
         'nationality' => 'الجنسية',
         'educational_qualification' => 'المؤهل الدراسي',
         'how_know_id' => 'كيف تعرفت علينا ؟',
