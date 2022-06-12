@@ -28,6 +28,7 @@ class Volunteer extends Model
         'motives',
         'field_id',
         'volunteer_category',
+        'category_exp',
         'favorite_time',
         'has_car',
     ];

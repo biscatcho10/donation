@@ -40,8 +40,12 @@ return [
         'motives' => 'الدوافع',
         'field_id' => 'المجال',
         'volunteer_category' => 'فئة المتطوع',
+        'category_exp' => 'المزيد من الايضاح',
         'favorite_time' => 'الوقت المفضل',
         'has_car' => 'هل لديه سيارة ؟',
+        'children' => 'الأطفال',
+        'adults' => 'البالغين',
+        'more_exp' => 'المزيد من الايضاح',
     ],
     'dialogs' => [
         'delete' => [

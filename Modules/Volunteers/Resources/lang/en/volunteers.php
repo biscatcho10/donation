@@ -40,8 +40,12 @@ return [
         'motives' => 'Motives',
         'field_id' => 'Field',
         'volunteer_category' => 'Volunteer Category',
+        'category_exp' => 'More clarification',
         'favorite_time' => 'Favorite Time',
         'has_car' => 'Has Car ?',
+        'children' => 'Children',
+        'adults' => 'Adults',
+        'more_exp' => 'More Experiences',
     ],
     'dialogs' => [
         'delete' => [
