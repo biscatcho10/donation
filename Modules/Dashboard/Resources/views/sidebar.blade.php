@@ -8,13 +8,10 @@
 @include('accounts::admins.sidebar')
 {{-- Donors --}}
 @include('donations::donors.sidebar')
-{{-- Service --}}
-@include('services::services.sidebar')
 {{-- volunteers --}}
 @include('volunteers::volunteers.sidebar')
-{{-- Events --}}
-{{-- Users --}}
-{{-- @include('accounts::users.sidebar') --}}
+{{-- Service --}}
+@include('services::services.sidebar')
 {{-- Partners --}}
 @include('partners::partners.sidebar')
 {{-- News --}}
