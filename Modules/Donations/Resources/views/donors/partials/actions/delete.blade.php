@@ -1,31 +1,31 @@
-@if(auth()->user()->hasPermission('delete_partners'))
-    <a href="#country-{{ $partner->id }}-delete-model" class="btn btn-outline-danger waves-effect waves-light btn-sm"
+@if(auth()->user()->hasPermission('delete_donors'))
+    <a href="#country-{{ $donor->id }}-delete-model" class="btn btn-outline-danger waves-effect waves-light btn-sm"
        data-toggle="modal">
         <i class="fas fa-trash-alt fa fa-fw"></i>
     </a>
 
     <!-- Modal -->
-    <div class="modal fade" id="country-{{ $partner->id }}-delete-model" tabindex="-1" role="dialog"
-         aria-labelledby="modal-title-{{ $partner->id }}" aria-hidden="true">
+    <div class="modal fade" id="country-{{ $donor->id }}-delete-model" tabindex="-1" role="dialog"
+         aria-labelledby="modal-title-{{ $donor->id }}" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"
-                        id="modal-title-{{ $partner->id }}">@lang('partners::partners.dialogs.delete.title')</h5>
+                        id="modal-title-{{ $donor->id }}">@lang('donations::donors.dialogs.delete.title')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    @lang('partners::partners.dialogs.delete.info')
+                    @lang('donations::donors.dialogs.delete.info')
                 </div>
                 <div class="modal-footer">
-                    {{ BsForm::delete(route('dashboard.partners.destroy', $partner)) }}
+                    {{ BsForm::delete(route('dashboard.donors.destroy', $donor)) }}
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        @lang('partners::partners.dialogs.delete.cancel')
+                        @lang('donations::donors.dialogs.delete.cancel')
                     </button>
                     <button type="submit" class="btn btn-danger">
-                        @lang('partners::partners.dialogs.delete.confirm')
+                        @lang('donations::donors.dialogs.delete.confirm')
                     </button>
                     {{ BsForm::close() }}
                 </div>

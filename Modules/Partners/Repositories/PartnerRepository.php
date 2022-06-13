@@ -9,14 +9,14 @@ use Modules\Partners\Http\Filters\PartnerFilter;
 class PartnerRepository implements CrudRepository
 {
     /**
-     * @var \Modules\Countries\Http\Filters\PartnerFilter
+     * @var \Modules\Partners\Http\Filters\PartnerFilter
      */
     private $filter;
 
     /**
      * PartnerRepository constructor.
      *
-     * @param \Modules\Countries\Http\Filters\PartnerFilter $filter
+     * @param \Modules\Partners\Http\Filters\PartnerFilter $filter
      */
     public function __construct(PartnerFilter $filter)
     {
@@ -24,7 +24,7 @@ class PartnerRepository implements CrudRepository
     }
 
     /**
-     * Get all countries as a collection.
+     * Get all Partners as a collection.
      *
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
@@ -37,7 +37,7 @@ class PartnerRepository implements CrudRepository
      * Save the created model to storage.
      *
      * @param array $data
-     * @return \Modules\Countries\Entities\Partner
+     * @return \Modules\Partners\Entities\Partner
      */
     public function create(array $data)
     {
@@ -53,7 +53,7 @@ class PartnerRepository implements CrudRepository
      * Display the given Partner instance.
      *
      * @param mixed $model
-     * @return \Modules\Countries\Entities\Partner
+     * @return \Modules\Partners\Entities\Partner
      */
     public function find($model)
     {

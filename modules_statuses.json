@@ -10,5 +10,6 @@
     "News": true,
     "Services": true,
     "Volunteers": true,
-    "HowKnow": true
+    "HowKnow": true,
+    "Donations": true
 }

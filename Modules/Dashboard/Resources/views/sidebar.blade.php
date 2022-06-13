@@ -6,6 +6,8 @@
 @endcomponent
 {{-- Admins --}}
 @include('accounts::admins.sidebar')
+{{-- Donors --}}
+@include('donations::donors.sidebar')
 {{-- Service --}}
 @include('services::services.sidebar')
 {{-- volunteers --}}

@@ -21,12 +21,6 @@ class PartnersController extends Controller
     private $repository;
 
     /**
-     * @var CityRepository
-     */
-    private $cityRepository;
-
-
-    /**
      * CountryController constructor.
      *
      * @param PartnerRepository $repository
