@@ -14,4 +14,7 @@
 
 Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(function () {
     Route::resource('donors', 'DonorController');
+
+    Route::get('donation-data', 'DonationsController@getForm')->name('donation.data');
+    Route::put('donation-data', 'DonationsController@saveData')->name('donation.data.save');
 });

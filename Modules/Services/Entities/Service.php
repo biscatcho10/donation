@@ -81,4 +81,10 @@ class Service extends Model implements HasMedia
         return $this->hasMany(SubService::class, 'service_id');
     }
 
+
+    public function donations()
+    {
+        return $this->hasMany(Donation::class, 'service_id');
+    }
+
 }

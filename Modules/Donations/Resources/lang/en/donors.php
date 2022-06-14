@@ -3,6 +3,10 @@
 return [
     'singular' => 'Donor',
     'plural' => 'Donors',
+    '_plural' => 'Donors',
+    'donation' => 'Donation',
+    'donations' => 'Donations',
+    'data' => 'Donation Data',
     'empty' => 'There are no Donors yet.',
     'count' => 'Donors count',
     'search' => 'Search',
@@ -24,11 +28,15 @@ return [
         'updated' => 'The Donor has been updated successfully.',
         'deleted' => 'The Donor has been deleted successfully.',
         'images_note' => 'Supported types: jpeg, png,jpg | Max File Size:10MB',
+        'data_updated' => 'Donation Data updated successfully.',
     ],
     'attributes' => [
         'name' => 'Donor Name',
         'email' => 'Email',
         'phone' => 'Phone',
+        "title" => "Title",
+        "description" => "Description",
+        "thanks_message" => "Thank You Message",
     ],
     'dialogs' => [
         'delete' => [
