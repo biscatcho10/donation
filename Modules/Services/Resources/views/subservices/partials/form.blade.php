@@ -15,12 +15,10 @@
 
 @isset($subservice)
     <div class="form-group col-6">
-        <label for="category-image"> @lang('services::subservices.attributes.images') </label>
         {{ BsForm::image('image')->unlimited(false)->collection('images')->files($subservice->getMediaResource('images'))->notes(trans('services::galleries.messages.images_note')) }}
     </div>
 @else
     <div class="form-group col-6">
-        <label for="category-image"> @lang('services::subservices.attributes.images') </label>
         {{ BsForm::image('image')->unlimited(false)->collection('images')->notes('Supported types: jpeg, png,jpg,gif,svg | max: 10 Mb') }}
     </div>
 @endisset
