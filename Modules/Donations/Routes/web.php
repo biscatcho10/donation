@@ -13,7 +13,11 @@
 
 
 Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(function () {
+    // Donors Routes
     Route::resource('donors', 'DonorController');
+
+    // Donations Routes
+    Route::resource('donations', 'DonationsController')->except('create', 'store', 'edit', 'update');
 
     Route::get('donation-data', 'DonationsController@getForm')->name('donation.data');
     Route::put('donation-data', 'DonationsController@saveData')->name('donation.data.save');

@@ -5,11 +5,20 @@ namespace Modules\Donations\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Donations\Entities\Donation;
 use Modules\Donations\Entities\DonationData;
+use Modules\Donations\Http\Filters\DonationFilter;
 use Modules\Donations\Http\Requests\DonationDataRequest;
 
 class DonationsController extends Controller
 {
+
+    public function __construct(DonationFilter $filter)
+    {
+        $this->filter = $filter;
+    }
+
+
 
     public function getForm()
     {
@@ -35,5 +44,28 @@ class DonationsController extends Controller
         flash(trans('donations::donors.messages.data_updated'))->success();
 
         return redirect()->back();
+    }
+
+
+    public function index()
+    {
+        $donations = Donation::filter($this->filter)->paginate(request('perPage'));
+        return view('donations::donations.index', compact('donations'));
+    }
+
+
+    public function show(Donation $donation)
+    {
+        return view('donations::donations.show', compact('donation'));
+    }
+
+
+    public function destroy(Donation $donation)
+    {
+        $donation->delete();
+
+        flash(trans('donations::donors.messages.donation_del'))->success();
+
+        return redirect()->route('dashboard.donations.index');
     }
 }

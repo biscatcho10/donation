@@ -1,5 +1,5 @@
-@if(auth()->user()->hasPermission('show_donors'))
-    <a href="{{ route('dashboard.donors.show', $donor) }}"
+@if(auth()->user()->hasPermission('show_donations'))
+    <a href="{{ route('dashboard.donations.show', $donation) }}"
        class="btn btn-outline-warning waves-effect waves-light btn-sm">
         <i class="fas fa fa-fw fa-eye"></i>
     </a>

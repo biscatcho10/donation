@@ -12,53 +12,19 @@ class DonorFilter extends BaseFilters
      * @var array
      */
     protected $filters = [
-        'name',
-        'email',
-        'phone',
+        'donor',
     ];
 
     /**
-     * Filter the query by a given name.
+     * Filter the query by a given donor.
      *
      * @param string|int $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function name($value)
+    protected function donor($value)
     {
         if ($value) {
-            return $this->builder->whereTranslationLike('name', "%$value%");
-        }
-
-        return $this->builder;
-    }
-
-
-    /**
-     * Filter the query by a given email.
-     *
-     * @param string|int $value
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    protected function email($value)
-    {
-        if ($value) {
-            return $this->builder->where('email', "LIKE", "%$value%");
-        }
-
-        return $this->builder;
-    }
-
-
-    /**
-     * Filter the query by a given phone.
-     *
-     * @param string|int $value
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    protected function phone($value)
-    {
-        if ($value) {
-            return $this->builder->where('phone', "LIKE", "%$value%");
+            return $this->builder->donor->where('name', "LIKE", "%$value%");
         }
 
         return $this->builder;

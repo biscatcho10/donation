@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Modules\Donations\Entities\Donor;
+use Modules\Services\Entities\Service;
 
 class CreateDonationsTable extends Migration
 {
@@ -15,19 +17,14 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('donor_id');
-            $table->unsignedBigInteger('amount');
+            $table->foreignIdFor(Donor::class)->constrained()->cascadeOnDelete();
+            $table->double('amount');
             $table->string('currency')->nullable();
-            $table->string('payment_method')->nullable();
-            $table->string('payment_id')->nullable();
             $table->boolean('payment_status')->default(false);
             $table->date('payment_date')->nullable();
             $table->text('payment_details')->nullable();
-            $table->enum('type', ['general', 'special'])->default(false);
-            $table->unsignedBigInteger('service_id')->nullable();
-
-            $table->foreign('donor_id')->references('id')->on('donors');
-            $table->foreign('service_id')->references('id')->on('services');
+            $table->enum('type', ['general', 'special'])->default('general');
+            $table->foreignIdFor(Service::class)->constrained()->cascadeOnDelete()->nullable();
             $table->timestamps();
         });
     }

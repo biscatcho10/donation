@@ -12,6 +12,13 @@
             'module' => 'Donations',
         ],
         [
+            'name' => trans('donations::donations.plural'),
+            'url' => route('dashboard.donations.index'),
+            'can' => ['permission' => 'read_donations'],
+            'isActive' => request()->routeIs('*donations.index'),
+            'module' => 'Donations',
+        ],
+        [
             'name' => trans('donations::donors._plural'),
             'url' => route('dashboard.donors.index'),
             'can' => ['permission' => 'read_donors'],

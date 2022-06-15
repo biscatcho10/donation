@@ -1,58 +1,64 @@
 @extends('dashboard::layouts.default')
 
 @section('title')
-    @lang('donations::donors.plural')
+    @lang('donations::donations.plural')
 @endsection
 
 @section('content')
     @component('dashboard::layouts.components.page')
-        @slot('title', trans('donations::donors.plural'))
-        @slot('breadcrumbs', ['dashboard.donors.index'])
+        @slot('title', trans('donations::donations.plural'))
+        @slot('breadcrumbs', ['dashboard.donations.index'])
 
-        @include('donations::donors.partials.filter')
+        @include('donations::donations.partials.filter')
 
         @component('dashboard::layouts.components.table-box')
-            @slot('title', trans('donations::donors.actions.list'))
+            @slot('title', trans('donations::donations.actions.list'))
             @slot('tools')
-                @include('donations::donors.partials.actions.create')
             @endslot
 
             <thead>
                 <tr>
-                    <th>@lang('donations::donors.attributes.name')</th>
-                    <th>@lang('donations::donors.attributes.email')</th>
-                    <th>@lang('donations::donors.attributes.phone')</th>
+                    <th>@lang('donations::donations.attributes.donor')</th>
+                    <th>@lang('donations::donations.attributes.email')</th>
+                    <th>@lang('donations::donations.attributes.amount')</th>
+                    <th>@lang('donations::donations.attributes.type')</th>
+                    <th>@lang('donations::donations.attributes.service')</th>
                     <th style="width: 160px">...</th>
                 </tr>
             </thead>
             <tbody>
-                @forelse($donors as $donor)
+                @forelse($donations as $donation)
                     <tr>
                         <td class="d-none d-md-table-cell">
-                            {{ $donor->name }}
+                            {{ $donation->donor->name }}
                         </td>
                         <td class="d-none d-md-table-cell">
-                            {{ $donor->email }}
+                            {{ $donation->donor->email }}
                         </td>
                         <td class="d-none d-md-table-cell">
-                            {{ $donor->phone }}
+                            {{ $donation->amount }}
+                        </td>
+                        <td class="d-none d-md-table-cell">
+                            {{ $donation->type }}
+                        </td>
+                        <td class="d-none d-md-table-cell">
+                            {{ $donation->type == 'service' ? $donation->service->name : '...' }}
                         </td>
 
                         <td style="width: 160px">
-                            @include('donations::donors.partials.actions.show')
-                            @include('donations::donors.partials.actions.edit')
-                            @include('donations::donors.partials.actions.delete')
+                            @include('donations::donations.partials.actions.show')
+                            @include('donations::donations.partials.actions.delete')
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="100" class="text-center">@lang('donations::donors.empty')</td>
+                        <td colspan="100" class="text-center">@lang('donations::donations.empty')</td>
                     </tr>
                 @endforelse
 
-                @if ($donors->hasPages())
+                @if ($donations->hasPages())
                     @slot('footer')
-                        {{ $donors->links() }}
+                        {{ $donations->links() }}
                     @endslot
                 @endif
             @endcomponent
