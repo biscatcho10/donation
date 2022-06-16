@@ -15,36 +15,41 @@
 
                     <table class="table table-middle">
                         <tbody>
-                        <tr>
-                            <th width="200">@lang('donations::donations.attributes.donor')</th>
-                            <td>{{ $donation->donor->name }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('donations::donations.attributes.email')</th>
-                            <td>{{ $donation->donor->email }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('donations::donations.attributes.amount')</th>
-                            <td>{{ $donation->amount }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('donations::donations.attributes.currency')</th>
-                            <td>{{ $donation->currency }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('donations::donations.attributes.payment_status')</th>
-                            <td>{{ $donation->payment_status }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('donations::donations.attributes.type')</th>
-                            <td>{{ $donation->type }}</td>
-                        </tr>
-                        @if ($donation->type == 'service')
                             <tr>
-                                <th width="200">@lang('donations::donations.attributes.service')</th>
-                                <td>{{ $donation->service->name }}</td>
+                                <th width="200">@lang('donations::donations.attributes.donor')</th>
+                                <td>{{ $donation->donor->name }}</td>
                             </tr>
-                        @endif
+                            <tr>
+                                <th width="200">@lang('donations::donations.attributes.email')</th>
+                                <td>{{ $donation->donor->email }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donations.attributes.amount')</th>
+                                <td>{{ $donation->amount }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donations.attributes.currency')</th>
+                                <td>{{ $donation->currency }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donations.attributes.payment_status')</th>
+                                <td>{{ $donation->payment_status }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donations.attributes.type')</th>
+                                <td>
+                                    @php
+                                        $type = 'donations::donations.attributes.' . $donation->type;
+                                    @endphp
+                                    {{ __($type) }}
+                                </td>
+                            </tr>
+                            @if ($donation->type == 'special')
+                                <tr>
+                                    <th width="200">@lang('donations::donations.attributes.service')</th>
+                                    <td>{{ $donation->service->name }}</td>
+                                </tr>
+                            @endif
                         </tbody>
                     </table>
 
@@ -54,6 +59,5 @@
                 @endcomponent
             </div>
         </div>
-
     @endcomponent
 @endsection

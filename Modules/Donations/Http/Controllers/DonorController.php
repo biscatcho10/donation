@@ -86,7 +86,9 @@ class DonorController extends Controller
     {
         $donor = $this->repository->find($donor);
 
-        return view('donations::donors.show', compact('donor'));
+        $donations = $donor->donations()->paginate(8);
+
+        return view('donations::donors.show', compact('donor', 'donations'));
     }
 
     /**

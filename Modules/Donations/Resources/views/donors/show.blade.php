@@ -39,4 +39,6 @@
         </div>
 
     @endcomponent
+
+    @include('donations::donations.partials.components.donations')
 @endsection

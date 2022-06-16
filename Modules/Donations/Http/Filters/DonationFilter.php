@@ -12,7 +12,9 @@ class DonationFilter extends BaseFilters
      * @var array
      */
     protected $filters = [
-        'donor_name' => 'donor_name',
+        'donor' => 'donor',
+        'service' => 'service',
+        'type' => 'type',
     ];
 
 
@@ -23,31 +25,49 @@ class DonationFilter extends BaseFilters
      * @param string|int $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function donor_name($value)
+    protected function donor($value)
     {
         if ($value) {
-            return $this->builder->whereTranslationLike('name', "%$value%");
+            return $this->builder->where('donor_id', $value);
         }
 
         return $this->builder;
     }
 
 
+
     /**
-     * Filter the query by a given email.
+     * Filter the query by a given name.
      *
      * @param string|int $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function email($value)
+    protected function service($value)
     {
         if ($value) {
-            return $this->builder->where('email', "LIKE", "%$value%");
+            return $this->builder->where('service_id', $value);
         }
 
         return $this->builder;
     }
 
+
+
+
+    /**
+     * Filter the query by a given name.
+     *
+     * @param string|int $value
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function type($value)
+    {
+        if ($value) {
+            return $this->builder->where('type', $value);
+        }
+
+        return $this->builder;
+    }
 
 
 }

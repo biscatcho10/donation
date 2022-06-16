@@ -41,6 +41,8 @@ return [
         'service' => 'Service',
         'email' => 'Email',
         'phone' => 'Phone',
+        'general' => 'General',
+        'special' => 'Special',
     ],
     'dialogs' => [
         'delete' => [

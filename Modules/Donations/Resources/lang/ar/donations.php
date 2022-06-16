@@ -37,6 +37,8 @@ return [
         'service' => 'الخدمة',
         'email' => 'البريد الإلكتروني',
         'phone' => 'رقم الهاتف',
+        'general' => 'عام',
+        'special' => 'خاص',
     ],
     'dialogs' => [
         'delete' => [

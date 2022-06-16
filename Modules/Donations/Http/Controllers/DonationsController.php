@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Donations\Entities\Donation;
 use Modules\Donations\Entities\DonationData;
+use Modules\Donations\Entities\Donor;
 use Modules\Donations\Http\Filters\DonationFilter;
 use Modules\Donations\Http\Requests\DonationDataRequest;
+use Modules\Services\Entities\Service;
 
 class DonationsController extends Controller
 {
@@ -49,8 +51,10 @@ class DonationsController extends Controller
 
     public function index()
     {
+        $donors = Donor::pluck('name', 'id')->toArray();
+        $services = Service::listsTranslations('name')->pluck('name', 'id')->toArray();
         $donations = Donation::filter($this->filter)->paginate(request('perPage'));
-        return view('donations::donations.index', compact('donations'));
+        return view('donations::donations.index', compact('donations', 'donors', 'services'));
     }
 
 
@@ -64,7 +68,7 @@ class DonationsController extends Controller
     {
         $donation->delete();
 
-        flash(trans('donations::donors.messages.donation_del'))->success();
+        flash(trans('donations::donations.messages.deleted'))->success();
 
         return redirect()->route('dashboard.donations.index');
     }
