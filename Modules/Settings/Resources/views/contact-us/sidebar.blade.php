@@ -8,8 +8,8 @@
         [
             'name' => trans('settings::contactus.actions.list'),
             'url' => route('dashboard.contact-us.index'),
-            'can' => ['permission' => 'read_partners'],
-            'isActive' => request()->routeIs('*partners.index'),
+            'can' => ['permission' => 'read_contactus'],
+            'isActive' => request()->routeIs('*contact-us.index'),
             'module' => 'Settings',
         ]
     ])

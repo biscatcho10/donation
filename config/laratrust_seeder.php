@@ -31,6 +31,7 @@ return [
             'donors' => 'c,r,u,d,s',
             'donations' => 'r,d,s',
             'contactus' => 'r,d,s',
+            'subscribers' => 'r,d,s',
         ],
     ],
 

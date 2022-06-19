@@ -8,7 +8,9 @@ use Modules\Countries\Database\Seeders\CountriesTableSeeder;
 use Modules\Donations\Database\Seeders\DonationTableSeeder;
 use Modules\HowKnow\Database\Seeders\ReasonSeederTableSeeder;
 use Modules\Services\Database\Seeders\ServiceTableSeeder;
+use Modules\Settings\Database\Seeders\ContactusTableSeeder;
 use Modules\Settings\Database\Seeders\SettingsDatabaseSeeder;
+use Modules\Settings\Database\Seeders\SubscribersTableSeeder;
 use Modules\Volunteers\Database\Seeders\FieldTableSeeder;
 
 class DummyDataSeeder extends Seeder
@@ -28,5 +30,8 @@ class DummyDataSeeder extends Seeder
         $this->call(FieldTableSeeder::class);
         $this->call(ServiceTableSeeder::class);
         $this->call(DonationTableSeeder::class);
+        $this->call(SubscribersTableSeeder::class);
+        $this->call(ContactusTableSeeder::class);
+
     }
 }

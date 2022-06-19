@@ -22,6 +22,8 @@
 @include('countries::sidebar')
 {{-- Contact Us --}}
 @include('settings::contact-us.sidebar')
+{{-- Subscribers --}}
+@include('settings::subscribers.sidebar')
 {{--settings--}}
 @include('dashboard::sidebar.settings')
 
