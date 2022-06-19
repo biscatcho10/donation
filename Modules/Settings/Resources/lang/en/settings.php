@@ -55,6 +55,8 @@ return [
         'whats_app' => 'Whats app number',
         'email' => 'Email',
         'phone' => 'Phone number',
+        'mobile' => 'Mobile number',
+        'fax' => 'Fax number',
         'android_app_id' => 'Android App ID',
         'ios_app_id' => 'Ios App ID',
         'current_android_version' => 'Current Android Version',

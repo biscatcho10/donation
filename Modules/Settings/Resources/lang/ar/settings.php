@@ -57,6 +57,8 @@ return [
         'whats_app' => 'رقم الواتس',
         'email' => 'البريد الاكتروني',
         'phone' => 'رقم الهاتف',
+        'mobile' => 'رقم الجوال',
+        'fax' => 'رقم الفاكس',
         'android_app_id' => 'معرف تطبيق Android',
         'ios_app_id' => 'معرف تطبيق Ios',
         'current_android_version' => 'إصدار Android الحالي',

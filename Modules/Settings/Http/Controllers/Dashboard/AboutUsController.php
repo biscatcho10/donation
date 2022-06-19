@@ -25,18 +25,6 @@ class AboutUsController extends Controller
             $about = AboutUs::create($request->all());
         }
 
-        $awards = [];
-        if($request->has('awards') && $request->awards[0]['link'] != null){
-            foreach ($request->awards as $award) {
-                $awards[] = $award['link'];
-            }
-        }else{
-            $awards = null;
-        }
-
-        $about->awards = $awards;
-        $about->save();
-
         $about->addAllMediaFromTokens();
         return redirect()->back()->with('success', trans("settings::settings.messages.update_about"));
     }
