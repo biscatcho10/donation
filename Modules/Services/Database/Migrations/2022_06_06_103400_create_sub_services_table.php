@@ -17,9 +17,9 @@ class CreateSubServicesTable extends Migration
         Schema::create('sub_services', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('service_id');
-            $table->string('meta_title');
-            $table->string('meta_description');
-            $table->string('meta_keywords');
+            $table->string('meta_title')->nullable();
+            $table->string('meta_description')->nullable();
+            $table->string('meta_keywords')->nullable();
 
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->timestamps();

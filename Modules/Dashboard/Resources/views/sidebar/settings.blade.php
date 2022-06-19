@@ -31,6 +31,15 @@
             'module' => 'Settings',
             'icon' => 'fas fa-file-invoice',
         ],
+        // settings awards
+        [
+            'name' => trans('settings::awards.plural'),
+            'url' => route('dashboard.awards.index'),
+            'can' => ['permission' => 'read_awards'],
+            'isActive' => request()->routeIs('dashboard.news.index'),
+            'module' => 'Settings',
+            'icon' => 'fas fa-award',
+        ],
         // settings seo
         [
             'name' => trans('settings::settings.tabs.seo'),

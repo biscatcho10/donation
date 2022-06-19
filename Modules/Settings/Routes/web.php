@@ -28,4 +28,7 @@ Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(fun
     // about us route
     Route::get('about-us', 'Dashboard\AboutUsController@form')->name('about-us');
     Route::put('about-us', 'Dashboard\AboutUsController@update')->name('about-us.update');
+
+    // award route
+    Route::resource('awards', 'Dashboard\AwardController');
 });

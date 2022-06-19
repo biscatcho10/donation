@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePartnersTable extends Migration
+class CreateAwardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreatePartnersTable extends Migration
      */
     public function up()
     {
-        Schema::create('partners', function (Blueprint $table) {
+        Schema::create('awards', function (Blueprint $table) {
             $table->id();
-            $table->string('meta_title')->nullable();
+            $table->string('url');
+            $table->date('date');
+            $table->string('meta_title')->nullable();;
             $table->string('meta_description')->nullable();
             $table->string('meta_keywords')->nullable();
             $table->timestamps();
@@ -29,6 +31,6 @@ class CreatePartnersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('partners');
+        Schema::dropIfExists('awards');
     }
 }

@@ -29,6 +29,7 @@ return [
             'reasons' => 'c,r,u,d,s',
             'volunteers' => 'c,r,u,d,s',
             'donors' => 'c,r,u,d,s',
+            'awards' => 'c,r,u,d,s',
             'donations' => 'r,d,s',
             'contactus' => 'r,d,s',
             'subscribers' => 'r,d,s',
