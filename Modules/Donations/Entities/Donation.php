@@ -15,6 +15,7 @@ class Donation extends Model
         'donor_id',
         'amount',
         'currency',
+        'payment_type',
         'payment_status',
         'payment_date',
         'payment_details',
