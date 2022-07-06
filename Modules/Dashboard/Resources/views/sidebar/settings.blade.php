@@ -85,6 +85,14 @@
             'module' => 'HowKnow',
             'icon' => 'fas fa-question',
         ],
+        [
+            'name' => trans('donations::methods.plural'),
+            'url' => route('dashboard.donation-methods.index'),
+            'can' => ['permission' => 'read_methods'],
+            'isActive' => request()->routeIs('*donation-methods.index'),
+            'module' => 'Donations',
+            'icon' => 'fas fa-credit-card',
+        ],
         // settings titles
         [
             'name' => trans('settings::settings.tabs.titles'),

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Modules\Accounts\Database\Seeders\UsersTableSeeder;
 use Modules\Countries\Database\Seeders\CountriesTableSeeder;
+use Modules\Donations\Database\Seeders\DonationMethodTableSeeder;
 use Modules\Donations\Database\Seeders\DonationTableSeeder;
 use Modules\HowKnow\Database\Seeders\ReasonSeederTableSeeder;
 use Modules\Services\Database\Seeders\ServiceTableSeeder;
@@ -32,6 +33,7 @@ class DummyDataSeeder extends Seeder
         $this->call(DonationTableSeeder::class);
         $this->call(SubscribersTableSeeder::class);
         $this->call(ContactusTableSeeder::class);
+        // $this->call(DonationMethodTableSeeder::class);
 
     }
 }

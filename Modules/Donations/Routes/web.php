@@ -16,6 +16,9 @@ Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(fun
     // Donors Routes
     Route::resource('donors', 'DonorController');
 
+    // Donation Methods Routes
+    Route::resource('donation-methods', 'DonationMethodsController');
+
     // Donations Routes
     Route::resource('donations', 'DonationsController')->except('create', 'store', 'edit', 'update');
 
