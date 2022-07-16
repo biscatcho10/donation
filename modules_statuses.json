@@ -11,5 +11,6 @@
     "Services": true,
     "Volunteers": true,
     "HowKnow": true,
-    "Donations": true
+    "Donations": true,
+    "Sliders": true
 }

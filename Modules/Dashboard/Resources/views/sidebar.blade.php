@@ -18,6 +18,9 @@
 @include('news::news.sidebar')
 {{-- Galleries --}}
 @include('services::galleries.sidebar')
+{{-- Sliders --}}
+@include('sliders::sliders.sidebar')
+{{-- Events --}}
 {{-- Countries --}}
 @include('countries::sidebar')
 {{-- Contact Us --}}
