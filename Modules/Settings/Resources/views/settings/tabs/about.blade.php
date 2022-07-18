@@ -54,10 +54,15 @@
                     $(this).slideDown();
                 },
                 hide: function(e) {
-                    $(this).slideUp(1000,e);
+                    $(this).slideUp(1000, e);
                 },
                 isFirstItemUndeletable: true
             })
         });
     </script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap"
+        async defer></script>
+    <script src="{{ asset('js/map.js') }}"></script>
 @endpush
