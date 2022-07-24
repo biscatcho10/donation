@@ -18,15 +18,23 @@ class AboutUsController extends Controller
 
     public function update(Request $request)
     {
+        $inputs = $request->except('_token', 'map_address');
+        $location_arr = explode(",", $request->map_address);
+        $inputs["latitude"] = $location_arr[0];
+        $inputs["longitude"] = $location_arr[1];
+
         $about = AboutUs::first();
         if ($about) {
-            $about->update($request->all());
+            $about->update($inputs);
         } else {
-            $about = AboutUs::create($request->all());
+            $about = AboutUs::create($inputs);
         }
 
         $about->addAllMediaFromTokens();
-        return redirect()->back()->with('success', trans("settings::settings.messages.update_about"));
+
+        flash(trans('settings::settings.messages.update_about'))->success();
+
+        return redirect()->back();
     }
 
 

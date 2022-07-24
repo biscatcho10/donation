@@ -17,10 +17,11 @@ class CreateAboutUsTable extends Migration
             $table->id();
             $table->string('video_type')->nullable();
             $table->string('video_link')->nullable();
+            $table->string('longitude')->nullable()->default('31.233334');
+            $table->string('latitude')->nullable()->default('30.033333');
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
             $table->string('meta_keywords')->nullable();
-            // $table->text('awards')->nullable();
             $table->timestamps();
         });
     }

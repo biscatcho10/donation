@@ -97,65 +97,41 @@
             </div>
         </div>
     </div>
-    {{-- <div class="card">
+    <div class="card">
         <div class="card-header" id="headingThree">
             <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    {{ __('Awards') }}
+                    {{ __('Location') }}
                 </button>
             </h2>
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
+                <!-- address input -->
                 @isset($about)
-                    <div class="form-group">
-                        <label for="category-image">{{ __('settings::settings.attributes.awards') }}</label>
-                        <div data-repeater-list="awards">
-                            @if ($about->awards != null)
-                                @foreach ($about->awards as $award)
-                                    <div class="row" data-repeater-item>
-                                        <div class="form-group col-10">
-                                            {{ BsForm::text('link')->attribute('pattern', 'https://.*')->attribute(['data-parsley-type' => 'url', 'data-parsley-minlength' => '3'])->placeholder('https://award.com')->value($award) }}
-                                        </div>
-                                        <div class="form-group col-2">
-                                            <input data-repeater-delete type="button" class="btn btn-danger btn-sm"
-                                                value="{{ __('Delete') }}" />
-                                        </div>
-                                    </div>
-                                @endforeach
-                            @else
-                            <div class="row" data-repeater-item>
-                                <div class="form-group col-10">
-                                    {{ BsForm::text('link')->attribute('pattern', 'https://.*')->attribute(['data-parsley-type' => 'url', 'data-parsley-minlength' => '3'])->placeholder('https://award.com') }}
-                                </div>
-                                <div class="form-group col-2">
-                                    <input data-repeater-delete type="button" class="btn btn-danger btn-sm"
-                                        value="{{ __('Delete') }}" />
-                                </div>
-                            </div>
-                            @endif
+                    <div class="form-group col-12">
+                        <label style="margin-top: 28px;"
+                            class="col-xs-3 control-label">{{ __('Location On Map') }}</label>
+                        <div class="col-xs-9">
+                            <input type="hidden" name="map_address" id="map_latLon"
+                                value="{{ $about->latitude . ',' . $about->longitude }}">
+                            <div id="map" style="height: 400px; width: 100%;"></div>
                         </div>
-                        <input data-repeater-create type="button" value="{{ __('Add') }}" class="btn btn-primary" />
                     </div>
                 @else
-                    <div class="form-group">
-                        <label for="category-image">{{ __('settings::settings.attributes.awards') }}</label>
-                        <div data-repeater-list="awards">
-                            <div class="row" data-repeater-item>
-                                <div class="form-group col-10">
-                                    {{ BsForm::text('link')->attribute('pattern', 'https://.*')->attribute(['data-parsley-type' => 'url', 'data-parsley-minlength' => '3'])->placeholder('https://award.com') }}
-                                </div>
-                                <div class="form-group col-2">
-                                    <input data-repeater-delete type="button" class="btn btn-danger btn-sm"
-                                        value="{{ __('Delete') }}" />
-                                </div>
-                            </div>
+                    <div class="form-group col-12">
+                        <label style="margin-top: 28px;"
+                            class="col-xs-3 control-label">{{ __('Location On Map') }}</label>
+                        <div class="col-xs-9">
+                            <input type="hidden" name="map_address" id="map_latLon"
+                                value="{{ old('map_address', '30.033333,31.233334') }}">
+                            <div id="map" style="height: 400px; width: 100%;"></div>
                         </div>
-                        <input data-repeater-create type="button" value="{{ __('Add') }}" class="btn btn-primary" />
                     </div>
                 @endisset
+
             </div>
         </div>
-    </div> --}}
+    </div>
 </div>
