@@ -33,6 +33,7 @@ return [
         'tag_manager_note' => 'Please enter your tag manager id.',
         'images_note' => 'Supported types: jpeg, png,jpg | Max File Size:10MB',
         'update_about' => 'About us data has been updated successfully.',
+        'test_mail_sent' => 'Test mail has been sent successfully.',
     ],
     'attributes' => [
         'facebook' => 'Facebook',

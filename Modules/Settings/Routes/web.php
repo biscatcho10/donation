@@ -16,6 +16,9 @@ Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(fun
     Route::get('settings', 'Dashboard\SettingController@index')->name('settings.index');
     Route::put('settings', 'Dashboard\SettingController@update')->name('settings.update');
 
+    // test mail
+    Route::get('test-mail', 'Dashboard\SettingController@testMail')->name('settings.test-mail');
+
     // shipping settings route
     Route::get('settings/shipping', 'Dashboard\SettingController@shipping')->name('settings.shipping');
 

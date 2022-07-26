@@ -34,6 +34,7 @@ return [
         'shipping_note' => 'من فضلك اختر شركة شحن',
         'images_note' => 'الملفات المدعومة: jpeg ، png ، jpg | الحد الأقصى لحجم الملف: 10 ميجا بايت',
         'update_about' => 'تم تعديل بيانات عن الموقع بنجاح.',
+        'test_mail_sent' => 'تم ارسال البريد التجريبي بنجاح.',
     ],
     'attributes' => [
         'facebook' => 'Facebook',
