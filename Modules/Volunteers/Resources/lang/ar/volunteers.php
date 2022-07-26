@@ -7,6 +7,7 @@ return [
     'count' => 'عدد المتطوعين',
     'search' => 'بحث',
     'select' => 'اختر المتطوع',
+    'select_volunteer_category' => 'اختر فئة المتطوع',
     'perPage' => 'عدد النتائج بالصفحة',
     'filter' => 'ابحث عن متطوع',
     'actions' => [

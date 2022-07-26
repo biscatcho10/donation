@@ -7,6 +7,7 @@ return [
     'count' => 'Volunteers count',
     'search' => 'Search',
     'select' => 'Select Volunteer',
+    'select_volunteer_category' => 'Select Volunteer Category',
     'perPage' => 'Volunteers Per Page',
     'filter' => 'Search for Volunteer',
     'actions' => [

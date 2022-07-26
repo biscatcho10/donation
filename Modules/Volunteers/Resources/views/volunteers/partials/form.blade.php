@@ -76,8 +76,11 @@
 </div>
 
 <div class="row">
-    <div class="col-6">
-        {{ BsForm::select('volunteer_category')->options([
+    <div class="col-12">
+        {{ BsForm::select('volunteer_category')
+        ->attribute('class', 'custom-select')
+        ->placeholder(__('volunteers::volunteers.select_volunteer_category'))
+        ->options([
                 'children' => __('volunteers::volunteers.attributes.children'),
                 'adults' => __('volunteers::volunteers.attributes.adults'),
                 'more_exp' => __('volunteers::volunteers.attributes.more_exp'),

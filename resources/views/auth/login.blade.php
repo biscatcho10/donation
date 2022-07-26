@@ -14,10 +14,10 @@
                         <div class="bg-login text-center" style="background-image: url({{ app_login_background() }});">
                             <div class="bg-login-overlay"></div>
                             <div class="position-relative">
-                                <h5 class="text-white font-size-20">@lang('admin.auth.login.title')</h5>
-                                <p class="text-white-50 mb-0">@lang('admin.auth.login.info').</p>
+                                {{-- <h5 class="text-white font-size-20">@lang('admin.auth.login.title')</h5>
+                                <p class="text-white-50 mb-0">@lang('admin.auth.login.info').</p> --}}
                                 <a href="{{ route('home') }}" class="logo logo-dark mt-4">
-                                    <img src="{{ app_login_logo() }}" alt="" height="50">
+                                    <img src="{{ app_login_logo() }}" alt="" height="70">
                                 </a>
                             </div>
                         </div>
