@@ -1,8 +1,19 @@
+@isset($item)
 @php
     $countries = Modules\Countries\Entities\Country::listsTranslations('name')->pluck('name', 'id')->toArray();
     $cities = Modules\Countries\Entities\City::where('country_id', $item->address()->orderBy('id', 'desc')->first()->country_id ?? old('country_id'))->listsTranslations('name')->pluck('name', 'id')->toArray();
-
+    $country = $item->address()->orderBy('id', 'desc')->first()->country_id;
+    $city = $item->address()->orderBy('id', 'desc')->first()->city_id;
 @endphp
+
+@else
+@php
+    $countries = Modules\Countries\Entities\Country::listsTranslations('name')->pluck('name', 'id')->toArray();
+    $cities = [];
+    $country = old('country_id');
+    $city = old('city_id');
+@endphp
+@endisset
 
 <div class="row">
     <div class="col-12">
@@ -20,7 +31,7 @@
             :required="true">
         </select2> --}}
 
-        {{ BsForm::select('country_id', $countries, $item->address()->orderBy('id', 'desc')->first()->country_id ?? old('country_id'))->label(trans("countries::countries.singular"))->attribute(["class" => "custom-select country"])->placeholder(__("countries::countries.select")) }}
+        {{ BsForm::select('country_id', $countries, $country)->label(trans("countries::countries.singular"))->attribute(["class" => "custom-select country"])->placeholder(__("countries::countries.select")) }}
     </div>
 
     <div class="col-6">
@@ -30,7 +41,7 @@
             :required="true">
         </select2> --}}
 
-        {{ BsForm::select('city_id', $cities , $item->address()->orderBy('id', 'desc')->first()->city_id ?? old('city_id'))->label(trans("countries::cities.singular"))->attribute(["class" => "custom-select city"])->placeholder(__("countries::cities.select")) }}
+        {{ BsForm::select('city_id', $cities , $city)->label(trans("countries::cities.singular"))->attribute(["class" => "custom-select city"])->placeholder(__("countries::cities.select")) }}
     </div>
 </div>
 

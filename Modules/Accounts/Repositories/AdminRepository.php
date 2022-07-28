@@ -50,6 +50,7 @@ class AdminRepository implements CrudRepository
     {
         $admin = Admin::create($data);
 
+        $admin->attachRoles([$data['role_id']]);
         // $this->setType($admin, $data);
         // if (\Module::collections()->has('Roles')) {
         //     $admin->attachRoles([$data['role_id']]);

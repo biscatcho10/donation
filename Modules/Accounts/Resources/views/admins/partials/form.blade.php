@@ -3,6 +3,9 @@
 {{ BsForm::email('email')->required()->attribute(['data-parsley-type' => 'email','data-parsley-minlength' => '3']) }}
 {{ BsForm::password('password') }}
 {{ BsForm::password('password_confirmation') }}
+
+<input type="hidden" name="role_id" value="1">
+
 {{-- @if(\Module::collections()->has('Roles'))
     <select2 name="role_id"
             label="@lang('roles::roles.singular')"
