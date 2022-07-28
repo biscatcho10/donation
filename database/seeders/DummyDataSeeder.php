@@ -33,7 +33,7 @@ class DummyDataSeeder extends Seeder
         $this->call(DonationTableSeeder::class);
         $this->call(SubscribersTableSeeder::class);
         $this->call(ContactusTableSeeder::class);
-        // $this->call(DonationMethodTableSeeder::class);
+        $this->call(DonationMethodTableSeeder::class);
 
     }
 }

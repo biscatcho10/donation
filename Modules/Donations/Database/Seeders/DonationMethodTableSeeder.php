@@ -45,8 +45,10 @@ class DonationMethodTableSeeder extends Seeder
                 "meta_keywords" => $method["meta_keywords"],
             ]);
 
-            $image = "methods\\" . $key . ".jpg";
-            $donation_method->addMedia(public_path($image))->toMediaCollection('images');
+            $image = __DIR__ . '\methods\\' . $key . '.jpg';
+            $donation_method->addMedia($image)
+                ->preservingOriginal()
+                ->toMediaCollection('images');
         }
     }
 }
