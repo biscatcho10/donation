@@ -31,4 +31,14 @@ class ContactUs extends Model
         return strtolower($value);
     }
 
+    public function getMessageAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    // public function getCreatedAtAttribute($value)
+    // {
+    //     return time_difference($value);
+    // }
+
 }

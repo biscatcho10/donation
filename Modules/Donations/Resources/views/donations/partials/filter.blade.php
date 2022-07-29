@@ -7,12 +7,9 @@
             {{ BsForm::select('donor')->options($donors)->label(__("donations::donations.attributes.donor"))->placeholder(__("donations::donors.select")) }}
         </div>
         <div class="col-md-3">
-            {{ BsForm::select('service')->options($services)->label(__("donations::donations.attributes.service"))->placeholder(__("services::services.select")) }}
-        </div>
-        <div class="col-md-3">
             {{ BsForm::select('type')->options([
-                'general' => __('donations::donations.attributes.general'),
-                'special' => __('donations::donations.attributes.special'),
+                'online' => __('donations::donations.attributes.online'),
+                'offline' => __('donations::donations.attributes.offline'),
             ])->label(__("donations::donations.attributes.type"))->placeholder(__("donations::donations.attributes.type")) }}
         </div>
         <div class="col-md-3">

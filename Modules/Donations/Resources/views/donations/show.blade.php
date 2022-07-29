@@ -33,7 +33,11 @@
                                     @php
                                         $type = 'donations::donations.attributes.' . $donation->type;
                                     @endphp
-                                    {{ __($type) }}
+                                    @if ($donation->type === 'online')
+                                        <span class="badge badge-soft-success font-size-12">{{ __($type) }}</span>
+                                    @else
+                                        <span class="badge badge-soft-danger font-size-12">{{ __($type) }}</span>
+                                    @endif
                                 </td>
                             </tr>
                             @if ($donation->type == 'special')
@@ -42,6 +46,10 @@
                                     <td>{{ $donation->service->name }}</td>
                                 </tr>
                             @endif
+                            <tr>
+                                <th width="200">@lang('donations::donations.attributes.paid_at')</th>
+                                <td>{{ $donation->paid_at }}</td>
+                            </tr>
                         </tbody>
                     </table>
 

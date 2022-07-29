@@ -49,6 +49,14 @@
     "Video" : "الفيديو",
     "Awards" : "الجوائز",
     "Location" : "الموقع",
-    "Location On Map" : "الموقع على الخريطة"
+    "Location On Map" : "الموقع على الخريطة",
+    "Inbox" : "البريد الوارد",
+    "load more" : "تحميل المزيد",
+    "Latest Donations" : "أحدث التبرعات",
+    "Date" : "التاريخ",
+    "Donor Name" : "اسم المتبرع",
+    "Amount" : "المبلغ",
+    "Donation Type" : "نوع التبرع",
+    "View" : "عرض"
 
 }

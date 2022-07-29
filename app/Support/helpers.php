@@ -305,3 +305,27 @@ if (!function_exists('layout')) {
 }
 
 
+// calculate the time difference between two timestamps
+function time_difference($start)
+{
+    $end = time();
+    $uts['start'] = strtotime($start);
+    $uts['end'] = strtotime($end);
+    if ($uts['start'] !== false && $uts['end'] !== false) {
+        if ($uts['end'] >= $uts['start']) {
+            $diff = $uts['end'] - $uts['start'];
+            if ($days = intval((floor($diff / 86400)))) {
+                $diff = $diff % 86400;
+            }
+            if ($hours = intval((floor($diff / 3600)))) {
+                $diff = $diff % 3600;
+            }
+            if ($minutes = intval((floor($diff / 60)))) {
+                $diff = $diff % 60;
+            }
+            $diff = intval($diff);
+            return array('days' => $days, 'hours' => $hours, 'minutes' => $minutes, 'seconds' => $diff);
+        }
+    }
+    return false;
+}

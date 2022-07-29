@@ -38,6 +38,7 @@ return [
         'phone' => 'Phone',
         'online' => 'Online',
         'offline' => 'Offline',
+        'paid_at' => 'Paid At',
     ],
     'dialogs' => [
         'delete' => [

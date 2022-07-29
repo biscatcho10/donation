@@ -35,6 +35,7 @@ class DonationTableSeeder extends Seeder
                 'amount' => $fake->randomFloat(2, 0, 100),
                 'type' => 'offline',
                 'donation_method_id' => 1,
+                'paid_at' => $fake->dateTimeBetween('-1 years', 'now'),
             ]);
 
 
@@ -48,6 +49,7 @@ class DonationTableSeeder extends Seeder
                 'amount' => $fake->randomFloat(2, 0, 100),
                 'type' => 'online',
                 'donation_method_id' => 2,
+                'paid_at' => $fake->dateTimeBetween('-1 years', 'now'),
             ]);
 
         }

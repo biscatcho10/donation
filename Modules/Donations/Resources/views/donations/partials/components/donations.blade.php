@@ -8,6 +8,7 @@
             <th>@lang('donations::donations.attributes.donor')</th>
             <th>@lang('donations::donations.attributes.amount')</th>
             <th>@lang('donations::donations.attributes.type')</th>
+            <th>@lang('donations::donations.attributes.paid_at')</th>
             <th style="width: 160px">...</th>
         </tr>
     </thead>
@@ -27,10 +28,13 @@
                         $type = 'donations::donations.attributes.' . $donation->type;
                     @endphp
                     @if ($donation->type === 'online')
-                        <span class="badge badge-success">{{ __($type) }}</span>
+                        <span class="badge badge-soft-success font-size-12">{{ __($type) }}</span>
                     @else
-                        <span class="badge badge-secondary">{{ __($type) }}</span>
+                        <span class="badge badge-soft-danger font-size-12">{{ __($type) }}</span>
                     @endif
+                </td>
+                <td class="d-none d-md-table-cell">
+                    {{ $donation->paid_at }}
                 </td>
 
                 <td style="width: 160px">

@@ -34,6 +34,7 @@ return [
         'phone' => 'رقم الهاتف',
         'online' => 'اون لاين',
         'offline' => 'اوف لاين',
+        'paid_at' => 'تاريخ الدفع',
     ],
     'dialogs' => [
         'delete' => [

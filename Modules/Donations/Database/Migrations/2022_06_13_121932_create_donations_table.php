@@ -22,6 +22,7 @@ class CreateDonationsTable extends Migration
             $table->foreignIdFor(DonationMethod::class)->constrained()->cascadeOnDelete();
             $table->double('amount');
             $table->enum('type', ['online', 'offline']);
+            $table->timestamp('paid_at')->nullable();
             $table->timestamps();
         });
     }
