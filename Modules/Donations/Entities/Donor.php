@@ -14,6 +14,8 @@ class Donor extends Model
         'name',
         'email',
         'phone',
+        'address',
+        'nearest_landmark',
     ];
 
 
@@ -38,12 +40,6 @@ class Donor extends Model
     public function getDonationsAmountFormattedAttribute()
     {
         return number_format($this->donations_amount, 2);
-    }
-
-
-    public function getDonationsAmountFormattedCurrencyAttribute()
-    {
-        return $this->donations_amount_formatted . ' ' . $this->donations_currency;
     }
 
 }

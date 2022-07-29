@@ -36,6 +36,8 @@ return [
         'phone' => 'رقم الهاتف',
         "title" => "العنوان",
         "description" => "الوصف",
+        "address" => "العنوان",
+        "landmark" => "المنطقة المعلمة",
         "thanks_message" => "رسالة الشكر",
     ],
     'dialogs' => [

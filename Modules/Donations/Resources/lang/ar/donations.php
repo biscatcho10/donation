@@ -28,17 +28,12 @@ return [
     ],
     'attributes' => [
         'amount' => 'المبلغ',
-        'currency' => 'العملة',
-        'payment_status' => 'حالة الدفع',
-        'payment_date' => 'تاريخ الدفع',
-        'payment_details' => 'تفاصيل الدفع',
         'type' => 'النوع',
         'donor' => 'اسم المتبرع',
-        'service' => 'الخدمة',
         'email' => 'البريد الإلكتروني',
         'phone' => 'رقم الهاتف',
-        'general' => 'عام',
-        'special' => 'خاص',
+        'online' => 'اون لاين',
+        'offline' => 'اوف لاين',
     ],
     'dialogs' => [
         'delete' => [

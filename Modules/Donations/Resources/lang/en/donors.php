@@ -36,6 +36,8 @@ return [
         'phone' => 'Phone',
         "title" => "Title",
         "description" => "Description",
+        "address" => "Address",
+        "landmark" => "Landmark",
         "thanks_message" => "Thank You Message",
     ],
     'dialogs' => [

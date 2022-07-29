@@ -30,10 +30,10 @@ class DummyDataSeeder extends Seeder
         $this->call(SettingsDatabaseSeeder::class);
         $this->call(FieldTableSeeder::class);
         $this->call(ServiceTableSeeder::class);
+        $this->call(DonationMethodTableSeeder::class);
         $this->call(DonationTableSeeder::class);
         $this->call(SubscribersTableSeeder::class);
         $this->call(ContactusTableSeeder::class);
-        $this->call(DonationMethodTableSeeder::class);
 
     }
 }

@@ -6,10 +6,8 @@
     <thead>
         <tr>
             <th>@lang('donations::donations.attributes.donor')</th>
-            <th>@lang('donations::donations.attributes.email')</th>
             <th>@lang('donations::donations.attributes.amount')</th>
             <th>@lang('donations::donations.attributes.type')</th>
-            <th>@lang('donations::donations.attributes.service')</th>
             <th style="width: 160px">...</th>
         </tr>
     </thead>
@@ -17,10 +15,9 @@
         @forelse($donations as $donation)
             <tr>
                 <td class="d-none d-md-table-cell">
-                    {{ $donation->donor->name }}
-                </td>
-                <td class="d-none d-md-table-cell">
-                    {{ $donation->donor->email }}
+                    <a href="{{ route('dashboard.donors.show', $donation->donor->id) }}">
+                        {{ $donation->donor->name }}
+                    </a>
                 </td>
                 <td class="d-none d-md-table-cell">
                     {{ $donation->amount }}
@@ -29,10 +26,11 @@
                     @php
                         $type = 'donations::donations.attributes.' . $donation->type;
                     @endphp
-                    {{ __($type) }}
-                </td>
-                <td class="d-none d-md-table-cell">
-                    {{ $donation->type == 'special' ? $donation->service->name : '...' }}
+                    @if ($donation->type === 'online')
+                        <span class="badge badge-success">{{ __($type) }}</span>
+                    @else
+                        <span class="badge badge-secondary">{{ __($type) }}</span>
+                    @endif
                 </td>
 
                 <td style="width: 160px">
@@ -51,4 +49,4 @@
                 {{ $donations->links() }}
             @endslot
         @endif
- @endcomponent
+    @endcomponent

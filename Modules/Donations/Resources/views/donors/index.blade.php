@@ -32,10 +32,10 @@
                             {{ $donor->name }}
                         </td>
                         <td class="d-none d-md-table-cell">
-                            {{ $donor->email }}
+                            {{ $donor->email ?? '---' }}
                         </td>
                         <td class="d-none d-md-table-cell">
-                            {{ $donor->phone }}
+                            {{ $donor->phone ?? '---' }}
                         </td>
 
                         <td style="width: 160px">

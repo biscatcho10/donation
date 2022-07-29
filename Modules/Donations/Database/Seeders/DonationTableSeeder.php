@@ -20,23 +20,34 @@ class DonationTableSeeder extends Seeder
     {
         $fake = Factory::create();
 
-        for($i = 0; $i < 100; $i++) {
+        for($i = 0; $i < 50; $i++) {
 
-            $donor = Donor::create([
+            // offline donation
+            $donor1 = Donor::create([
                 'name' => $fake->name,
                 'email' => $fake->email,
-                'phone' => $fake->phoneNumber
+                'phone' => $fake->phoneNumber,
+                'address' => $fake->address,
+                'nearest_landmark' => $fake->streetName,
+            ]);
+            $donation = Donation::create([
+                'donor_id' => $donor1->id,
+                'amount' => $fake->randomFloat(2, 0, 100),
+                'type' => 'offline',
+                'donation_method_id' => 1,
             ]);
 
+
+
+            // online donation
+            $donor2 = Donor::create([
+                'name' => $fake->name,
+            ]);
             $donation = Donation::create([
-                'donor_id' => $donor->id,
+                'donor_id' => $donor2->id,
                 'amount' => $fake->randomFloat(2, 0, 100),
-                'currency' => $fake->currencyCode,
-                'payment_status' => $fake->boolean,
-                'payment_date' => $fake->dateTime,
-                'payment_details' => $fake->text,
-                'type' => $fake->randomElement(['general', 'special']),
-                'service_id' => $fake->randomElement(Service::pluck('id')->toArray())
+                'type' => 'online',
+                'donation_method_id' => 2,
             ]);
 
         }

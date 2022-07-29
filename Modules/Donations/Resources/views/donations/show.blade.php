@@ -17,23 +17,15 @@
                         <tbody>
                             <tr>
                                 <th width="200">@lang('donations::donations.attributes.donor')</th>
-                                <td>{{ $donation->donor->name }}</td>
-                            </tr>
-                            <tr>
-                                <th width="200">@lang('donations::donations.attributes.email')</th>
-                                <td>{{ $donation->donor->email }}</td>
+                                <td>
+                                    <a href="{{ route('dashboard.donors.show', $donation->donor->id) }}">
+                                        {{ $donation->donor->name }}
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <th width="200">@lang('donations::donations.attributes.amount')</th>
                                 <td>{{ $donation->amount }}</td>
-                            </tr>
-                            <tr>
-                                <th width="200">@lang('donations::donations.attributes.currency')</th>
-                                <td>{{ $donation->currency }}</td>
-                            </tr>
-                            <tr>
-                                <th width="200">@lang('donations::donations.attributes.payment_status')</th>
-                                <td>{{ $donation->payment_status }}</td>
                             </tr>
                             <tr>
                                 <th width="200">@lang('donations::donations.attributes.type')</th>

@@ -32,17 +32,12 @@ return [
     ],
     'attributes' => [
         'amount' => 'Amount',
-        'currency' => 'Currency',
-        'payment_status' => 'Payment Status',
-        'payment_date' => 'Payment Date',
-        'payment_details' => 'Payment Details',
         'type' => 'Type',
         'donor' => 'Donor',
-        'service' => 'Service',
         'email' => 'Email',
         'phone' => 'Phone',
-        'general' => 'General',
-        'special' => 'Special',
+        'online' => 'Online',
+        'offline' => 'Offline',
     ],
     'dialogs' => [
         'delete' => [

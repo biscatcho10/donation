@@ -15,18 +15,26 @@
 
                     <table class="table table-middle">
                         <tbody>
-                        <tr>
-                            <th width="200">@lang('donations::donors.attributes.name')</th>
-                            <td>{{ $donor->name }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('donations::donors.attributes.email')</th>
-                            <td>{{ $donor->email }}</td>
-                        </tr>
-                        <tr>
-                            <th width="200">@lang('donations::donors.attributes.phone')</th>
-                            <td>{{ $donor->phone }}</td>
-                        </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donors.attributes.name')</th>
+                                <td>{{ $donor->name }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donors.attributes.email')</th>
+                                <td>{{ $donor->email ?? '---' }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donors.attributes.phone')</th>
+                                <td>{{ $donor->phone ?? '---' }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donors.attributes.address')</th>
+                                <td>{{ $donor->address ?? '---' }}</td>
+                            </tr>
+                            <tr>
+                                <th width="200">@lang('donations::donors.attributes.landmark')</th>
+                                <td>{{ $donor->nearest_landmark ?? '---' }}</td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -37,7 +45,6 @@
                 @endcomponent
             </div>
         </div>
-
     @endcomponent
 
     @include('donations::donations.partials.components.donations')
