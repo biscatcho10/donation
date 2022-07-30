@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div>
-                            <p class="text-muted fw-medium mt-1 mb-2">Total Amount</p>
+                            <p class="text-muted fw-medium mt-1 mb-2">{{ __('Total Amount') }}</p>
                             <h4>{{ $donation_amount }}</h4>
                         </div>
                     </div>
@@ -97,16 +97,13 @@
                                 </div>
                             </div>
                             <div class="resize-triggers">
-                                <div class="expand-trigger">
-                                    <div style="width: 59px; height: 88px;"></div>
-                                </div>
                                 <div class="contract-trigger"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                </span> Total Amount of Donations</p>
+                </span>{{ __('Total Amount of Donations') }}</p>
             </div>
         </div>
     </div>
@@ -116,7 +113,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div>
-                            <p class="text-muted fw-medium mt-1 mb-2">Online Donation</p>
+                            <p class="text-muted fw-medium mt-1 mb-2">{{ __('Online Donations') }}</p>
                             <h4>{{ $online_amount }}</h4>
                         </div>
                     </div>
@@ -210,17 +207,14 @@
                                 </div>
                             </div>
                             <div class="resize-triggers">
-                                <div class="expand-trigger">
-                                    <div style="width: 59px; height: 88px;"></div>
-                                </div>
                                 <div class="contract-trigger"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            </span> Total Amount of Online Donations</p>
-        </div>
+                </span>{{ __('Total Amount of Online Donations') }}</p>
+            </div>
         </div>
     </div>
     <div class="col-md-4">
@@ -229,7 +223,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div>
-                            <p class="text-muted fw-medium mt-1 mb-2">Offline Donation</p>
+                            <p class="text-muted fw-medium mt-1 mb-2">{{ __('Offline Donations') }}</p>
                             <h4>{{ $offline_amount }}</h4>
                         </div>
                     </div>
@@ -284,7 +278,7 @@
                                                             <path id="SvgjsPath1462"
                                                                 d="M 48 16.919512195121953 A 31.080487804878047 31.080487804878047 0 1 1 19.182673515257143 36.35704434170984"
                                                                 fill="none" fill-opacity="0.85"
-                                                                stroke="rgba(69,203,133,0.85)" stroke-opacity="1"
+                                                                stroke="rgba(255, 159, 67,1.0)" stroke-opacity="1"
                                                                 stroke-linecap="butt"
                                                                 stroke-width="3.1658536585365873" stroke-dasharray="0"
                                                                 class="apexcharts-radialbar-area apexcharts-radialbar-slice-0"
@@ -296,7 +290,7 @@
                                                         <circle id="SvgjsCircle1458" r="24.5450487804878"
                                                             cx="48" cy="48"
                                                             class="apexcharts-radialbar-hollow"
-                                                            fill="rgba(69, 203, 133, .25)"></circle>
+                                                            fill="rgba(254, 202, 87,1.0)"></circle>
                                                         <g id="SvgjsG1459" class="apexcharts-datalabels-group"
                                                             transform="translate(0, 0) scale(1)" style="opacity: 1;">
                                                             <text id="SvgjsText1460"
@@ -311,7 +305,7 @@
                                                 </g>
                                             </g>
                                             <line id="SvgjsLine1463" x1="0" y1="0" x2="96"
-                                                y2="0" stroke="#b6b6b6" stroke-dasharray="0"
+                                                y2="0" stroke="#ff9f43" stroke-dasharray="0"
                                                 stroke-width="1" class="apexcharts-ycrosshairs"></line>
                                             <line id="SvgjsLine1464" x1="0" y1="0" x2="96"
                                                 y2="0" stroke-dasharray="0" stroke-width="0"
@@ -323,17 +317,14 @@
                                 </div>
                             </div>
                             <div class="resize-triggers">
-                                <div class="expand-trigger">
-                                    <div style="width: 59px; height: 88px;"></div>
-                                </div>
                                 <div class="contract-trigger"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            </span> Total Amount of Offline Donations</p>
-        </div>
+                </span>{{ __('Total Amount of Offline Donations') }}</p>
+            </div>
         </div>
     </div>
 </div>

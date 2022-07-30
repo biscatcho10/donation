@@ -57,6 +57,12 @@
     "Donor Name" : "اسم المتبرع",
     "Amount" : "المبلغ",
     "Donation Type" : "نوع التبرع",
-    "View" : "عرض"
+    "View" : "عرض",
+    "Total Amount" : "المبلغ الإجمالي",
+    "Total Amount of Donations" : "مجموع المبالغ المتبرع بها",
+    "Online Donations" : "التبرعات (Online)",
+    "Total Amount of Online Donations" : "مجموع المبالغ المتبرع بها (Online)",
+    "Offline Donations" : "التبرعات (Offline)",
+    "Total Amount of Offline Donations" : "مجموع المبالغ المتبرع بها (Offline)"
 
 }

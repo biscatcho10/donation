@@ -36,7 +36,7 @@
 
 
                 <!-- Visitors Map -->
-                @include("dashboard::layouts.apps.vectoe-map")
+                {{-- @include("dashboard::layouts.apps.vectoe-map") --}}
 
                 <div class="row">
                     <div class="col-lg-4">
