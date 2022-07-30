@@ -17,3 +17,4 @@ Route::middleware('dashboard.locales')->group(function () {
 });
 Route::impersonate();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

@@ -33,6 +33,36 @@ class DashboardController extends Controller
         $offline_percentage = number_format((($offline_donation_amount / $donation_amount) * 100), 2);
 
 
+        $chartjs = app()->chartjs
+        ->name('lineChartTest')
+        ->type('line')
+        ->size(['width' => 400, 'height' => 200])
+        ->labels(['January', 'February', 'March', 'April', 'May', 'June', 'July'])
+        ->datasets([
+            [
+                "label" => "My First dataset",
+                'backgroundColor' => "rgba(38, 185, 154, 0.31)",
+                'borderColor' => "rgba(38, 185, 154, 0.7)",
+                "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
+                "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                "pointHoverBackgroundColor" => "#fff",
+                "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                'data' => [65, 59, 80, 81, 56, 55, 40],
+            ],
+            [
+                "label" => "My Second dataset",
+                'backgroundColor' => "rgba(38, 185, 154, 0.31)",
+                'borderColor' => "rgba(38, 185, 154, 0.7)",
+                "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
+                "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                "pointHoverBackgroundColor" => "#fff",
+                "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                'data' => [12, 33, 44, 44, 55, 23, 40],
+            ]
+        ])
+        ->options([]);
+
+
         return view('dashboard::index',[
             'messages' => $messages,
             'donations' => $donations,
@@ -42,6 +72,7 @@ class DashboardController extends Controller
             'online_percentage' => $online_percentage,
             'offline_amount' => $offline_amount,
             'offline_percentage' => $offline_percentage,
+            'chartjs' => $chartjs,
         ]);
     }
 }
